@@ -20,12 +20,12 @@ BLOG_AUTHOR = "Manash Baul"  # (translatable)
 BLOG_TITLE = "Emacsome"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "https://blank-manash.github.io/blog/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "mximpaid@gmail.com"
-BLOG_DESCRIPTION = "Demo"  # (translatable)
+BLOG_DESCRIPTION = "A Technical Blog About On Software and Mathematics"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -141,7 +141,6 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
     ),
 }
 
@@ -181,6 +180,19 @@ THEME_CONFIG = {
         'sidebar': ''
     }
 }
+
+# Config for bootstrap4:
+THEME_CONFIG = {
+     DEFAULT_LANG: {
+         # Use a light navbar with dark text. Defaults to False.
+         'navbar_light': True,
+         # Use a custom navbar color. If unset, 'navbar_light' sets text +
+         # background color. If set, navbar_light controls only background
+         # color. Supported values: bg-dark, bg-light, bg-primary, bg-secondary,
+         # bg-success, bg-danger, bg-warning, bg-info, bg-white, bg-transparent.
+         'navbar_custom_bg': 'bg-dark',
+     }
+ }
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 # (translatable)
