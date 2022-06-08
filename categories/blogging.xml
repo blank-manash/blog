@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome (Posts about blogging)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/blogging.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Jun 2022 08:19:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs Blogging</title><link>https://example.com/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgbcb6e5a" class="outline-2"&gt;
+&lt;h2 id="orgbcb6e5a"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbcb6e5a"&gt;
+&lt;p&gt;
+When I started off with development, one of the first tasks that you are typically supposed to do is make a blog. Me, a first year undergraduate completely new to the world of programming was handed a bunch of &lt;code&gt;.js&lt;/code&gt; files with the expectation to build a blog out of it.
+&lt;/p&gt;
+
+&lt;p&gt;
+And I did, eventually.
+&lt;/p&gt;
+
+&lt;p&gt;
+Except for the tweaks in CSS, which I stole from other websites. There were massive problems with that blog.
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;It didn't scale well&lt;/li&gt;
+&lt;li&gt;If you added a blog, the text didn't wrap properly.&lt;/li&gt;
+&lt;li&gt;The interface to add a blog was, 1940s to say the least.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Nevertheless, that project didn't go well, and my hopes of writing amazing technical blogs to share my infant JavaScript knowledge lies rested in my &lt;code&gt;~/web-dev/projects/blog&lt;/code&gt; folder.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org471eaea" class="outline-2"&gt;
+&lt;h2 id="org471eaea"&gt;Static Site builders.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org471eaea"&gt;
+&lt;p&gt;
+A great concept in itself, maybe you are using &lt;code&gt;Jekyll, Hugo&lt;/code&gt; or maybe even &lt;code&gt;react&lt;/code&gt; to build yours, but I had my handful of journey coming here.
+&lt;/p&gt;
+
+&lt;p&gt;
+I was introduced to &lt;code&gt;markdown&lt;/code&gt; pretty soon. Every developer has to make one. But I also had the requirement of introducing math in it, which made a bit difficult to the right software I need. 
+&lt;/p&gt;
+
+&lt;p&gt;
+I tried &lt;code&gt;Jekyll&lt;/code&gt; and &lt;code&gt;Hugo&lt;/code&gt; both, but both of them, despite being excellent software felt a little bloated. A lot of directories, and template make a mess of what a simple requirement I had, write and post.
+&lt;/p&gt;
+
+&lt;p&gt;
+I did found an old school solution called &lt;a href="https://dynalon.github.io/mdwiki/#!quickstart.md"&gt;MDWiki&lt;/a&gt;, which to be honest is pretty great, and was my preferred way to deploy something in case I want a quick web page. But then I met something else,
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgcc8d45b" class="outline-3"&gt;
+&lt;h3 id="orgcc8d45b"&gt;Enter Org-Mode&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcc8d45b"&gt;
+&lt;p&gt;
+Org-Mode is the single most transformable dictating software that make you want to put your plain life in a plain text, but with markup and extra features to keep you satisfied.
+&lt;/p&gt;
+
+&lt;p&gt;
+It's feels like a home in its self, whether is &lt;i&gt;coding, documentation, planning, thinking, journal&lt;/i&gt; or even all of that together. Org will be there, org will be your best partner in this.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org9369ea7" class="outline-3"&gt;
+&lt;h3 id="org9369ea7"&gt;Nikola&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9369ea7"&gt;
+&lt;p&gt;
+The plugin &lt;a href="https://github.com/getnikola/nikola"&gt;Nikola&lt;/a&gt;, was like godsend to me in writing a blog. It's painstakingly simple, almost to the point you start arguing how that's possible. There simple to use &lt;code&gt;CLI&lt;/code&gt; already makes things simpler, but since it's written in python, all the configuration files are simple dictionary which give you direct programmatic access to your variables, and there is no messy conversion of other format, even though that's possible if you may explicitly need it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org57b31a8" class="outline-2"&gt;
+&lt;h2 id="org57b31a8"&gt;Putting it all together.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org57b31a8"&gt;
+&lt;p&gt;
+All I need to do is install the &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;org-mode-plugin&lt;/a&gt;, edit the &lt;code&gt;conf.py&lt;/code&gt;, and boom. I can start writing blog posts. I changed my editor &lt;code&gt;export EDITOR="emacsclient -c"&lt;/code&gt; and there I can edit files in org easily.
+&lt;/p&gt;
+
+&lt;p&gt;
+Furthermore, I still haven't integrated the whole method into Emacs, but I will use a bash script to automate all the process and bind them to commands in Emacs using &lt;code&gt;shell-command&lt;/code&gt; function, until I find a better way to learn more &lt;code&gt;elisp&lt;/code&gt; and write its independent function.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org6df26e8" class="outline-2"&gt;
+&lt;h2 id="org6df26e8"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6df26e8"&gt;
+&lt;p&gt;
+There have been some inspirations to the whole method, primarily in no particular order,
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Reddit: For introducing me to &lt;code&gt;Nikola&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The Documentation for Nikola: &lt;a href="https://getnikola.com/documentation.html"&gt;Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lincoln's Website &lt;a href="https://clarete.li/"&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>blogging</category><category>emacs</category><guid>https://example.com/posts/emacs-blogging%20/</guid><pubDate>Wed, 08 Jun 2022 07:38:21 GMT</pubDate></item></channel></rss>
