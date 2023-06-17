@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: Am I back?
+.. slug: am-i-back
+.. date: 2023-06-17 17:30:44 UTC+05:30
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Am I back?
+
+I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added hence this is the first attempt. I will also look into MDWiki but to be supported for Org mode is a godsend and that's something to be proud of.
+
+Anyways to check support there is some code
+
+  #+BEGIN_SRC python
+  import numpy as np
+  import matplotlib.pyplot as plt
+  import pandas as pd
+
+  ## Create A program to find the sum of all the numbers in a list
+  def sum_list(l):
+      sum = 0
+      for i in l:
+          sum += i
+      return sum
+  #+END_SRC

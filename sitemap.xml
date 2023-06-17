@@ -7,50 +7,58 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://blank-manash.github.io/blog/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/2022/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blank-manash.github.io/blog/2023/</loc>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/archive.html</loc>
-  <lastmod>2022-06-08T10:16:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/blogging/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/cat_development-personal/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/emacs/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/galleries/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/galleries/demo/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/listings/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/listings/hello.py.html</loc>
-  <lastmod>2022-06-08T10:16:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blank-manash.github.io/blog/posts/am-i-back/</loc>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</loc>
-  <lastmod>2022-06-08T08:14:00Z</lastmod>
+  <lastmod>2023-06-17T12:19:00Z</lastmod>
  </url>
 </urlset>

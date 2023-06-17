@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Jun 2022 09:02:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs Blogging</title><link>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgbcb6e5a" class="outline-2"&gt;
-&lt;h2 id="orgbcb6e5a"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgbcb6e5a"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Jun 2023 12:19:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Am I back?</title><link>https://blank-manash.github.io/blog/posts/am-i-back/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org4859c5f" class="outline-2"&gt;
+&lt;h2 id="org4859c5f"&gt;Am I back?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4859c5f"&gt;
+&lt;p&gt;
+I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added hence this is the first attempt. I will also look into MDWiki but to be supported for Org mode is a godsend and that's something to be proud of.
+&lt;/p&gt;
+
+&lt;p&gt;
+Anyways to check support there is some code
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+
+  &lt;span class="c1"&gt;## Create A program to find the sum of all the numbers in a list&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sum_list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+      &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+      &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+	  &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/am-i-back/</guid><pubDate>Sat, 17 Jun 2023 12:00:44 GMT</pubDate></item><item><title>Emacs Blogging</title><link>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org1347462" class="outline-2"&gt;
+&lt;h2 id="org1347462"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1347462"&gt;
 &lt;p&gt;
 When I started off with development, one of the first tasks that you are typically supposed to do is make a blog. Me, a first year undergraduate completely new to the world of programming was handed a bunch of &lt;code&gt;.js&lt;/code&gt; files with the expectation to build a blog out of it.
 &lt;/p&gt;
@@ -26,9 +49,9 @@ Nevertheless, that project didn't go well, and my hopes of writing amazing techn
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org471eaea" class="outline-2"&gt;
-&lt;h2 id="org471eaea"&gt;Static Site builders.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org471eaea"&gt;
+&lt;div id="outline-container-org7543c6d" class="outline-2"&gt;
+&lt;h2 id="org7543c6d"&gt;Static Site builders.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7543c6d"&gt;
 &lt;p&gt;
 A great concept in itself, maybe you are using &lt;code&gt;Jekyll, Hugo&lt;/code&gt; or maybe even &lt;code&gt;react&lt;/code&gt; to build yours, but I had my handful of journey coming here.
 &lt;/p&gt;
@@ -46,9 +69,9 @@ I did found an old school solution called &lt;a href="https://dynalon.github.io/
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgcc8d45b" class="outline-3"&gt;
-&lt;h3 id="orgcc8d45b"&gt;Enter Org-Mode&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcc8d45b"&gt;
+&lt;div id="outline-container-org21dc4d5" class="outline-3"&gt;
+&lt;h3 id="org21dc4d5"&gt;Enter Org-Mode&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org21dc4d5"&gt;
 &lt;p&gt;
 Org-Mode is the single most transformable dictating software that make you want to put your plain life in a plain text, but with markup and extra features to keep you satisfied.
 &lt;/p&gt;
@@ -59,9 +82,9 @@ It's feels like a home in its self, whether is &lt;i&gt;coding, documentation, p
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9369ea7" class="outline-3"&gt;
-&lt;h3 id="org9369ea7"&gt;Nikola&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9369ea7"&gt;
+&lt;div id="outline-container-org5743347" class="outline-3"&gt;
+&lt;h3 id="org5743347"&gt;Nikola&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5743347"&gt;
 &lt;p&gt;
 The plugin &lt;a href="https://github.com/getnikola/nikola"&gt;Nikola&lt;/a&gt;, was like godsend to me in writing a blog. It's painstakingly simple, almost to the point you start arguing how that's possible. There simple to use &lt;code&gt;CLI&lt;/code&gt; already makes things simpler, but since it's written in python, all the configuration files are simple dictionary which give you direct programmatic access to your variables, and there is no messy conversion of other format, even though that's possible if you may explicitly need it.
 &lt;/p&gt;
@@ -69,9 +92,9 @@ The plugin &lt;a href="https://github.com/getnikola/nikola"&gt;Nikola&lt;/a&gt;,
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org57b31a8" class="outline-2"&gt;
-&lt;h2 id="org57b31a8"&gt;Putting it all together.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org57b31a8"&gt;
+&lt;div id="outline-container-orgf2eb20c" class="outline-2"&gt;
+&lt;h2 id="orgf2eb20c"&gt;Putting it all together.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf2eb20c"&gt;
 &lt;p&gt;
 All I need to do is install the &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;org-mode-plugin&lt;/a&gt;, edit the &lt;code&gt;conf.py&lt;/code&gt;, and boom. I can start writing blog posts. I changed my editor &lt;code&gt;export EDITOR="emacsclient -c"&lt;/code&gt; and there I can edit files in org easily.
 &lt;/p&gt;
@@ -82,9 +105,9 @@ Furthermore, I still haven't integrated the whole method into Emacs, but I will 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6df26e8" class="outline-2"&gt;
-&lt;h2 id="org6df26e8"&gt;References&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6df26e8"&gt;
+&lt;div id="outline-container-orgf145609" class="outline-2"&gt;
+&lt;h2 id="orgf145609"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf145609"&gt;
 &lt;p&gt;
 There have been some inspirations to the whole method, primarily in no particular order,
 &lt;/p&gt;
