@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Jun 2023 12:19:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Am I back?</title><link>https://blank-manash.github.io/blog/posts/am-i-back/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org4859c5f" class="outline-2"&gt;
-&lt;h2 id="org4859c5f"&gt;Am I back?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4859c5f"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Jun 2023 12:49:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Am I back?</title><link>https://blank-manash.github.io/blog/posts/am-i-back/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org5f05779" class="outline-2"&gt;
+&lt;h2 id="org5f05779"&gt;Am I back?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5f05779"&gt;
 &lt;p&gt;
-I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added hence this is the first attempt. I will also look into MDWiki but to be supported for Org mode is a godsend and that's something to be proud of.
+I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgca0b6a8" class="outline-3"&gt;
+&lt;h3 id="orgca0b6a8"&gt;How to revive this blog?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgca0b6a8"&gt;
+&lt;p&gt;
+Admittedly, it was a big of discovery to find out how this blog actually worked. But to make sure that I can have it up and running again. Here is a bit of heads up on how to achieve that quick.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0237d8b" class="outline-4"&gt;
+&lt;h4 id="org0237d8b"&gt;Step 1: The Repository&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0237d8b"&gt;
+&lt;p&gt;
+The repository is set up in &lt;code&gt;blank-manash/blog&lt;/code&gt;. To start, simply clone it to your system. It contains 2 branches, &lt;code&gt;src&lt;/code&gt; and &lt;code&gt;main&lt;/code&gt;, the src is where we would be actively working on, and the &lt;code&gt;main&lt;/code&gt; is from where the pages are published. Make sure you are checked out to the &lt;code&gt;src&lt;/code&gt; branch when you are working on this.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org265cab5" class="outline-4"&gt;
+&lt;h4 id="org265cab5"&gt;Step 2: Nikola&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org265cab5"&gt;
+&lt;p&gt;
+Install Nikola. The offical website asks you to install it using a venv. But the direct install through homebrew on my macbook works fine as well. Everything is already set up, you would want to run these commands.
 &lt;/p&gt;
 
-&lt;p&gt;
-Anyways to check support there is some code
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-  &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-
-  &lt;span class="c1"&gt;## Create A program to find the sum of all the numbers in a list&lt;/span&gt;
-  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sum_list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-      &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-      &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-	  &lt;span class="nb"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
-      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install nikola ghp-import
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org25e29f8" class="outline-4"&gt;
+&lt;h4 id="org25e29f8"&gt;Step 3: Edit&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org25e29f8"&gt;
+&lt;p&gt;
+Now you can simply get started by creating a new page from &lt;code&gt;nikola new_post -e&lt;/code&gt;, &lt;code&gt;nikola build&lt;/code&gt;, &lt;code&gt;nikola serve -b&lt;/code&gt; and &lt;code&gt;nikola github_deploy&lt;/code&gt;. It's self explanatory of what these things mean, but it really is that easy to get started with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/am-i-back/</guid><pubDate>Sat, 17 Jun 2023 12:00:44 GMT</pubDate></item><item><title>Emacs Blogging</title><link>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org1347462" class="outline-2"&gt;
 &lt;h2 id="org1347462"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;

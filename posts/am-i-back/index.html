@@ -92,28 +92,51 @@ I am back to blogging after a long time. I have been busy with my work and a lon
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org4859c5f" class="outline-2">
-<h2 id="org4859c5f">Am I back?</h2>
-<div class="outline-text-2" id="text-org4859c5f">
+    <div id="outline-container-org5f05779" class="outline-2">
+<h2 id="org5f05779">Am I back?</h2>
+<div class="outline-text-2" id="text-org5f05779">
 <p>
-I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added hence this is the first attempt. I will also look into MDWiki but to be supported for Org mode is a godsend and that's something to be proud of.
+I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added.
+</p>
+</div>
+
+<div id="outline-container-orgca0b6a8" class="outline-3">
+<h3 id="orgca0b6a8">How to revive this blog?</h3>
+<div class="outline-text-3" id="text-orgca0b6a8">
+<p>
+Admittedly, it was a big of discovery to find out how this blog actually worked. But to make sure that I can have it up and running again. Here is a bit of heads up on how to achieve that quick.
+</p>
+</div>
+
+<div id="outline-container-org0237d8b" class="outline-4">
+<h4 id="org0237d8b">Step 1: The Repository</h4>
+<div class="outline-text-4" id="text-org0237d8b">
+<p>
+The repository is set up in <code>blank-manash/blog</code>. To start, simply clone it to your system. It contains 2 branches, <code>src</code> and <code>main</code>, the src is where we would be actively working on, and the <code>main</code> is from where the pages are published. Make sure you are checked out to the <code>src</code> branch when you are working on this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org265cab5" class="outline-4">
+<h4 id="org265cab5">Step 2: Nikola</h4>
+<div class="outline-text-4" id="text-org265cab5">
+<p>
+Install Nikola. The offical website asks you to install it using a venv. But the direct install through homebrew on my macbook works fine as well. Everything is already set up, you would want to run these commands.
 </p>
 
-<p>
-Anyways to check support there is some code
-</p>
-
-<div class="highlight"><pre><span></span>  <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-  <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-  <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-  <span class="c1">## Create A program to find the sum of all the numbers in a list</span>
-  <span class="k">def</span> <span class="nf">sum_list</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-      <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
-      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-	  <span class="nb">sum</span> <span class="o">+=</span> <span class="n">i</span>
-      <span class="k">return</span> <span class="nb">sum</span>
+<div class="highlight"><pre><span></span>pip3 install nikola ghp-import
 </pre></div>
+</div>
+</div>
+
+<div id="outline-container-org25e29f8" class="outline-4">
+<h4 id="org25e29f8">Step 3: Edit</h4>
+<div class="outline-text-4" id="text-org25e29f8">
+<p>
+Now you can simply get started by creating a new page from <code>nikola new_post -e</code>, <code>nikola build</code>, <code>nikola serve -b</code> and <code>nikola github_deploy</code>. It's self explanatory of what these things mean, but it really is that easy to get started with it.
+</p>
+</div>
+</div>
 </div>
 </div>
     </div>
