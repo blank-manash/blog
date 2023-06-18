@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/archive.html</loc>
-  <lastmod>2023-06-17T12:19:00Z</lastmod>
+  <lastmod>2023-06-18T19:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/</loc>
@@ -60,5 +60,9 @@
  <url>
   <loc>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</loc>
   <lastmod>2023-06-17T12:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blank-manash.github.io/blog/posts/rate-limiter/</loc>
+  <lastmod>2023-06-18T19:38:00Z</lastmod>
  </url>
 </urlset>

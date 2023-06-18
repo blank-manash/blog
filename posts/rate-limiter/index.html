@@ -2,16 +2,25 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A Technical Blog About On Software and Mathematics">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emacsome</title>
-<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<title>Rate Limiter | Emacsome</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://blank-manash.github.io/blog/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/rate-limiter/" type="text/html">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://blank-manash.github.io/blog/posts/rate-limiter/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Manash Baul">
+<link rel="prev" href="../am-i-back/" title="Am I back?" type="text/html">
+<meta property="og:site_name" content="Emacsome">
+<meta property="og:title" content="Rate Limiter">
+<meta property="og:url" content="https://blank-manash.github.io/blog/posts/rate-limiter/">
+<meta property="og:description" content="Rate Limiter: The Why?
+
+
+Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expect">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-06-19T01:08:08+05:30">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -28,22 +37,29 @@
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href=".">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
 
             <span id="blog-title">Emacsome</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
-            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.org" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
 </div>
     </div>
 </header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
             <ul class="navbar-nav nav-fill d-flex w-100">
 <li class="nav-item">
-<a href="archive.html" class="nav-link">Archive</a>
+<a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
 <li class="nav-item">
-<a href="categories/" class="nav-link">Tags</a>
+<a href="../../categories/" class="nav-link">Tags</a>
 
                 
             </li>
@@ -59,24 +75,24 @@
         
         
         
-    
-        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Rate Limiter</a></h1>
 
-    
-        
-    <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rate-limiter/" class="u-url">Rate Limiter</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Manash Baul
-                    </span></p>
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Manash Baul
+            </span></p>
             <p class="dateline">
-            <a href="posts/rate-limiter/" rel="bookmark">
+            <a href="." rel="bookmark">
             <time class="published dt-published" datetime="2023-06-19T01:08:08+05:30" itemprop="datePublished" title="2023-06-19 01:08">2023-06-19 01:08</time></a>
             </p>
-                </div>
-            </header><div class="e-content entry-content">
-                    <div id="outline-container-orgb6250a0" class="outline-2">
+            
+        <p class="sourceline"><a href="index.org" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-orgb6250a0" class="outline-2">
 <h2 id="orgb6250a0">Rate Limiter: The Why?</h2>
 <div class="outline-text-2" id="text-orgb6250a0">
 <p>
@@ -230,190 +246,12 @@ Never thought a simple queue would have such a list of details to explain for a 
 </p>
 </div>
 </div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/am-i-back/" class="u-url">Am I back?</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Manash Baul
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/am-i-back/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-06-17T17:30:44+05:30" itemprop="datePublished" title="2023-06-17 17:30">2023-06-17 17:30</time></a>
-            </p>
-                </div>
-            </header><div class="e-content entry-content">
-                    <div id="outline-container-org5f05779" class="outline-2">
-<h2 id="org5f05779">Am I back?</h2>
-<div class="outline-text-2" id="text-org5f05779">
-<p>
-I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added.
-</p>
-</div>
-
-<div id="outline-container-orgca0b6a8" class="outline-3">
-<h3 id="orgca0b6a8">How to revive this blog?</h3>
-<div class="outline-text-3" id="text-orgca0b6a8">
-<p>
-Admittedly, it was a big of discovery to find out how this blog actually worked. But to make sure that I can have it up and running again. Here is a bit of heads up on how to achieve that quick.
-</p>
-</div>
-
-<div id="outline-container-org0237d8b" class="outline-4">
-<h4 id="org0237d8b">Step 1: The Repository</h4>
-<div class="outline-text-4" id="text-org0237d8b">
-<p>
-The repository is set up in <code>blank-manash/blog</code>. To start, simply clone it to your system. It contains 2 branches, <code>src</code> and <code>main</code>, the src is where we would be actively working on, and the <code>main</code> is from where the pages are published. Make sure you are checked out to the <code>src</code> branch when you are working on this.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org265cab5" class="outline-4">
-<h4 id="org265cab5">Step 2: Nikola</h4>
-<div class="outline-text-4" id="text-org265cab5">
-<p>
-Install Nikola. The offical website asks you to install it using a venv. But the direct install through homebrew on my macbook works fine as well. Everything is already set up, you would want to run these commands.
-</p>
-
-<div class="highlight"><pre><span></span>pip3 install nikola ghp-import
-</pre></div>
-</div>
-</div>
-
-<div id="outline-container-org25e29f8" class="outline-4">
-<h4 id="org25e29f8">Step 3: Edit</h4>
-<div class="outline-text-4" id="text-org25e29f8">
-<p>
-Now you can simply get started by creating a new page from <code>nikola new_post -e</code>, <code>nikola build</code>, <code>nikola serve -b</code> and <code>nikola github_deploy</code>. It's self explanatory of what these things mean, but it really is that easy to get started with it.
-</p>
-</div>
-</div>
-</div>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/emacs-blogging%20/" class="u-url">Emacs Blogging</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Manash Baul
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/emacs-blogging%20/" rel="bookmark">
-            <time class="published dt-published" datetime="2022-06-08T13:08:21+05:30" itemprop="datePublished" title="2022-06-08 13:08">2022-06-08 13:08</time></a>
-            </p>
-                </div>
-            </header><div class="e-content entry-content">
-                    <div id="outline-container-org1347462" class="outline-2">
-<h2 id="org1347462">How I finally made a blog with org-mode.</h2>
-<div class="outline-text-2" id="text-org1347462">
-<p>
-When I started off with development, one of the first tasks that you are typically supposed to do is make a blog. Me, a first year undergraduate completely new to the world of programming was handed a bunch of <code>.js</code> files with the expectation to build a blog out of it.
-</p>
-
-<p>
-And I did, eventually.
-</p>
-
-<p>
-Except for the tweaks in CSS, which I stole from other websites. There were massive problems with that blog.
-</p>
-
-<ul class="org-ul">
-<li>It didn't scale well</li>
-<li>If you added a blog, the text didn't wrap properly.</li>
-<li>The interface to add a blog was, 1940s to say the least.</li>
-</ul>
-<p>
-Nevertheless, that project didn't go well, and my hopes of writing amazing technical blogs to share my infant JavaScript knowledge lies rested in my <code>~/web-dev/projects/blog</code> folder.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org7543c6d" class="outline-2">
-<h2 id="org7543c6d">Static Site builders.</h2>
-<div class="outline-text-2" id="text-org7543c6d">
-<p>
-A great concept in itself, maybe you are using <code>Jekyll, Hugo</code> or maybe even <code>react</code> to build yours, but I had my handful of journey coming here.
-</p>
-
-<p>
-I was introduced to <code>markdown</code> pretty soon. Every developer has to make one. But I also had the requirement of introducing math in it, which made a bit difficult to the right software I need. 
-</p>
-
-<p>
-I tried <code>Jekyll</code> and <code>Hugo</code> both, but both of them, despite being excellent software felt a little bloated. A lot of directories, and template make a mess of what a simple requirement I had, write and post.
-</p>
-
-<p>
-I did found an old school solution called <a href="https://dynalon.github.io/mdwiki/#!quickstart.md">MDWiki</a>, which to be honest is pretty great, and was my preferred way to deploy something in case I want a quick web page. But then I met something else,
-</p>
-</div>
-
-<div id="outline-container-org21dc4d5" class="outline-3">
-<h3 id="org21dc4d5">Enter Org-Mode</h3>
-<div class="outline-text-3" id="text-org21dc4d5">
-<p>
-Org-Mode is the single most transformable dictating software that make you want to put your plain life in a plain text, but with markup and extra features to keep you satisfied.
-</p>
-
-<p>
-It's feels like a home in its self, whether is <i>coding, documentation, planning, thinking, journal</i> or even all of that together. Org will be there, org will be your best partner in this.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5743347" class="outline-3">
-<h3 id="org5743347">Nikola</h3>
-<div class="outline-text-3" id="text-org5743347">
-<p>
-The plugin <a href="https://github.com/getnikola/nikola">Nikola</a>, was like godsend to me in writing a blog. It's painstakingly simple, almost to the point you start arguing how that's possible. There simple to use <code>CLI</code> already makes things simpler, but since it's written in python, all the configuration files are simple dictionary which give you direct programmatic access to your variables, and there is no messy conversion of other format, even though that's possible if you may explicitly need it.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgf2eb20c" class="outline-2">
-<h2 id="orgf2eb20c">Putting it all together.</h2>
-<div class="outline-text-2" id="text-orgf2eb20c">
-<p>
-All I need to do is install the <a href="https://plugins.getnikola.com/v7/orgmode/">org-mode-plugin</a>, edit the <code>conf.py</code>, and boom. I can start writing blog posts. I changed my editor <code>export EDITOR="emacsclient -c"</code> and there I can edit files in org easily.
-</p>
-
-<p>
-Furthermore, I still haven't integrated the whole method into Emacs, but I will use a bash script to automate all the process and bind them to commands in Emacs using <code>shell-command</code> function, until I find a better way to learn more <code>elisp</code> and write its independent function.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf145609" class="outline-2">
-<h2 id="orgf145609">References</h2>
-<div class="outline-text-2" id="text-orgf145609">
-<p>
-There have been some inspirations to the whole method, primarily in no particular order,
-</p>
-
-<ul class="org-ul">
-<li>Reddit: For introducing me to <code>Nikola</code>
-</li>
-<li>The Documentation for Nikola: <a href="https://getnikola.com/documentation.html">Docs</a>
-</li>
-<li>Lincoln's Website <a href="https://clarete.li/">here</a>.</li>
-</ul>
-</div>
-</div>
-                </div>
-            </article>
-</div>
-    
-
-    
-    
-
-
-    
-
-
-        <!--End of body content-->
-
-        <footer id="footer">
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../am-i-back/" rel="prev" title="Am I back?">Previous post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2023         <a href="mailto:mximpaid@gmail.com">Manash Baul</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
@@ -422,7 +260,7 @@ There have been some inspirations to the whole method, primarily in no particula
 </div>
 
 
-        <script src="assets/js/all-nocdn.js"></script><script>
+        <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
