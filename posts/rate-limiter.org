@@ -1,0 +1,89 @@
+#+BEGIN_COMMENT
+.. title: Rate Limiter
+.. slug: rate-limiter
+.. date: 2023-06-19 01:08:08 UTC+05:30
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Rate Limiter: The Why?
+
+Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
+
+* Rate Limiter: The How?
+
+Sure it seems simple enough to implement a Rate Limiting, with the requirements as simple as
+
+ - Only an ~x~ number of requests are allowed from a host / IP / user per minute.
+
+But as always, there are some caveats, and this blog is about that caveats. To being with, let's look at how we can implement such a service. We are assuming the rate limiter service will be included as an middleware with the API Gateway which redirects requests to the web server.
+
+** Token Buckets
+Imagine we have a bucket, and we have it filled with some coins. Each request to pass through, requires 1 coin from it's bucket. If the bucket is empty, we drop the request. We also add a constant number of coins every second.
+
+Here is a simple implementation. We used id as the identifier on how we are limiting the requests (example: IP)
+
+#+BEGIN_SRC c++
+  bool passRequest(Request request) {
+    int id = request.id;
+    Bucket bucket = buckets[id];
+    return !bucket.isEmpty();
+  }
+#+END_SRC
+
+Although being simple and effective, the idea has a major flaw. It's is highly *resource intensive* as we would need a to create a bucket for every ~id~ and constantly refill all of the buckets in parallel. Due to such constraints it is an infeasible approach for a large scale system.
+
+** Leaky Buckets
+
+The idea is same, however instead of refilling the bucket every second, we replace the entire bucket with a queue. The queue has a fixed capacity, and for every request that comes in, we check if the queue is in capacity. If it is, we drop the request.
+
+This is a much better approach then the previous one as we don't have to constanty fill the bucket. And the outflow rate is the number of request processed per second. Do consider that this algorithm has a fixed rate of processing the request. And a sudden burst of traffic could cause the new requests to stall.
+
+** Sliding Window Log Algorithm
+
+This is the first approach that came to me when I first looked at the problem statement. The idea is same as before, to create a queue, but of timestamps.
+
+For every request that comes, we do the following operation
+
+- Append the timestamp of the request to the queue.
+- Delete obsolete timestamps from queue.
+
+Obsolete Timestamps: /Timestamp with time less than current start interval/
+Typically that would mean if we are limiting by 1 min, then all the timestamps less than 1 min of current request would be removed from the queue.
+
+This is a deterministic algorithm will accurate results. This doesn't impose a fixed rate of request consumption, as requests are served as they come. However storing timestamps for all the requests can be memory intensive, especially when scaled to a large number of users.
+
+** Sliding Window Count Algorithm
+
+This is tweak on the above algorithm, with making it probabilistic but with very low probablity of error, and much simpler implemention.
+We take a assumption that the rate of request is uniform over a window. And we keep a count only for the total number of requests recieved for the current window, and previous window. That's only two variables for each user.
+
+Now the trick, we count the total number of request of an interval as ~x * a + y * b~.
+- ~x~: Percentage of overlap of the last window.
+- ~a~: Number of requests recieved in the last window.
+- ~y~: Percentage of overlap of the current window.
+- ~b~: Number of requests recieved in the current window.
+
+If you look at it, you would recognize it as a running average of the number of requests received. And this works very nicely for real world usecase. According to experiments, it has a 0.003% of requests wrongly allowed done over 400 million requests. (Cloudfare)
+
+* Rate Limiter: The Caveats
+
+** Synchronization
+
+We could have too many requests for one rate limiter server to handle, for which we would need add multiple rate-limiter servers to filter requests. This would add the problem of data synchronization. Every request can go to random rate limiter which will make it diffcult to maintain the count of recieved request. One solution is to introduce sticky sessions where clients are redirected to a specific server for every server, but is easily isn't the best solution available.
+
+The better approach is to use a cache or a database where the servers can connect to store client information. With this way information is decoupled with processing, allowing them to integrate independently.
+
+** Race Conditions
+
+For any of the above approaches, we would need to store data in a centralized data storage. This introduces the problem of race condition. Say two requests from a user came at the same time. We would first check the counter of user at the same time. Which will return the same value for both of the requests, (as they are read at the same time) which will allow the request to be incorrectly updated with +1 instead of +2.
+
+A common solution to this problem is making the process atmoic. We can achieve this using lua scripts. Redis allows us to lua scripts as a mean of multi commands. Instead of putting the read_counter and check_and_update functions in the application logic, we can delegate them to redis script to read and update at the same time for each request. This would allow atomicity and handle race conditions.
+
+* Conclusion
+
+Never thought a simple queue would have such a list of details to explain for a simple functionality. But it's interesting to see the problems arise in a distributed system. Designing such system generally pose the problems of consistency and availabity. And a rate limiter, by a simple design isn't free of it either.
