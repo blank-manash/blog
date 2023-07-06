@@ -52,13 +52,13 @@ Make claims, prove them, Or disprove them.
 
 Concentrate on the key difficulty of the problem. What makes it so tough? And what if I remove it. Then if you have a solution, can we extend it. What are the most obvious used ideas? A few strategies may include
 
-• Make all the elements same.
-• Lower the Constraints
-• Making things monotonic.
-• Solving with The Extreme Principle.
-• Making Things symmetrical.
-• Increasing or Decreasing the number of invariant.
-• And the all powerful, Simplify.
+- Make all the elements same.
+- Lower the Constraints
+- Making things monotonic.
+- Solving with The Extreme Principle.
+- Making Things symmetrical.
+- Increasing or Decreasing the number of invariant.
+- And the all powerful, Simplify.
 
 * Invariants and Monotonicity
 
