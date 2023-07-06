@@ -998,4 +998,5 @@ table.codetable, table.highlighttable { width: 100%;}
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
+.post-title.p-name a { color: #527DF3 }
 
