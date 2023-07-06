@@ -11,34 +11,43 @@
 #+END_COMMENT
 
 * Introduction
+
 This is a slight overview on how you should approach a problem based on my experience. And what are the things you should be ready be with if you are unable to solve it.
 
 Some of Them are from the based on the book and additionally added by me.
 
+{{{TEASER_END}}}
 * Orientation
+
 Reading the problem statement correctly is very important. It’s very easy to miss a few lines or misinterpret and completely miss the solution.
 
 Here are some points to get started.
 
 ** Restate and Rephrase
+
 *Different Mathematical Models can lead you to different solutions.*
 
 This is fairly efficient in finding new approaches to
 a given problem. Trying to model on what is required, or simply /rewriting/ it in different mathematical notations or even form can reveal different strategies.
+
 ** Fantasize an Answer
+
  Given an answer,
  - How does it comply with the constraints given?
  - How does it fails?
  - What new constraints (which also even can be rewritten or rephrased.) can be concluded?
 ** Keep Coming Back
+
 In case of a hard problem, it can be the case you have missed a word or two because of which the problem seems impossible. Is the given graph just a tree with an extra edge? Keep coming back and read it again. It pays off.
 
 * Problem Solving
+
 This overall starts with defining the problem Structure of the given problem.This includes all the observable axioms and overall how the problem moves through different states. You have to observe the movement by getting your hands dirty and propose conjectures based on them. They need not be true or false but they must be proved.
 
 Make claims, prove them, Or disprove them.
 
 * Wishful Thinking And Make it Easier
+
 /“If You can’t a solve a problem, there exists an easier version of it which you can, find it!” - Polya./
 
 Concentrate on the key difficulty of the problem. What makes it so tough? And what if I remove it. Then if you have a solution, can we extend it. What are the most obvious used ideas? A few strategies may include
@@ -59,4 +68,3 @@ After the restate and rephrase part, try to notice what are the factors that do 
 Reduction is the method to convert a problem statement into a reduced problem statement. In easy problems, you'd find problems being reduced to very standards problems we know of.
 
 Asking relevant questions lead us to observations, these observations are then used tranpose the problem statement into something we already know and can work upon.
-

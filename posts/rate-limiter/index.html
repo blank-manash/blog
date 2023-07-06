@@ -32,7 +32,9 @@
                 <p class="lead">A Technical Blog About On Software and Mathematics</p>
 
             </div>
-                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../archive.html">Archive</a>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="https://github.com/blank-manash/">Github</a>
+        <a class="sidebar-nav-item" href="https://linkedin.com/in/manash-baul/">LinkedIn</a>
+        <a class="sidebar-nav-item" href="../../archive.html">Archive</a>
         <a class="sidebar-nav-item" href="../../categories/">Tags</a>
     
     
@@ -55,18 +57,18 @@
     
 
     <div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orgb6250a0" class="outline-2">
-<h2 id="orgb6250a0">Rate Limiter: The Why?</h2>
-<div class="outline-text-2" id="text-orgb6250a0">
+    <div id="outline-container-org653cd2e" class="outline-2">
+<h2 id="org653cd2e">Rate Limiter: The Why?</h2>
+<div class="outline-text-2" id="text-org653cd2e">
 <p>
 Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
 </p>
+<!-- TEASER_END -->
 </div>
 </div>
-
-<div id="outline-container-org40e3a83" class="outline-2">
-<h2 id="org40e3a83">Rate Limiter: The How?</h2>
-<div class="outline-text-2" id="text-org40e3a83">
+<div id="outline-container-org2847160" class="outline-2">
+<h2 id="org2847160">Rate Limiter: The How?</h2>
+<div class="outline-text-2" id="text-org2847160">
 <p>
 Sure it seems simple enough to implement a Rate Limiting, with the requirements as simple as
 </p>
@@ -79,9 +81,9 @@ But as always, there are some caveats, and this blog is about that caveats. To b
 </p>
 </div>
 
-<div id="outline-container-org9b3c284" class="outline-3">
-<h3 id="org9b3c284">Token Buckets</h3>
-<div class="outline-text-3" id="text-org9b3c284">
+<div id="outline-container-org2e579c3" class="outline-3">
+<h3 id="org2e579c3">Token Buckets</h3>
+<div class="outline-text-3" id="text-org2e579c3">
 <p>
 Imagine we have a bucket, and we have it filled with some coins. Each request to pass through, requires 1 coin from it's bucket. If the bucket is empty, we drop the request. We also add a constant number of coins every second.
 </p>
@@ -103,9 +105,9 @@ Although being simple and effective, the idea has a major flaw. It's is highly <
 </div>
 </div>
 
-<div id="outline-container-org9c17ced" class="outline-3">
-<h3 id="org9c17ced">Leaky Buckets</h3>
-<div class="outline-text-3" id="text-org9c17ced">
+<div id="outline-container-org3af00f3" class="outline-3">
+<h3 id="org3af00f3">Leaky Buckets</h3>
+<div class="outline-text-3" id="text-org3af00f3">
 <p>
 The idea is same, however instead of refilling the bucket every second, we replace the entire bucket with a queue. The queue has a fixed capacity, and for every request that comes in, we check if the queue is in capacity. If it is, we drop the request.
 </p>
@@ -116,9 +118,9 @@ This is a much better approach then the previous one as we don't have to constan
 </div>
 </div>
 
-<div id="outline-container-orgb0a7eb6" class="outline-3">
-<h3 id="orgb0a7eb6">Sliding Window Log Algorithm</h3>
-<div class="outline-text-3" id="text-orgb0a7eb6">
+<div id="outline-container-org5ce2759" class="outline-3">
+<h3 id="org5ce2759">Sliding Window Log Algorithm</h3>
+<div class="outline-text-3" id="text-org5ce2759">
 <p>
 This is the first approach that came to me when I first looked at the problem statement. The idea is same as before, to create a queue, but of timestamps.
 </p>
@@ -142,9 +144,9 @@ This is a deterministic algorithm will accurate results. This doesn't impose a f
 </div>
 </div>
 
-<div id="outline-container-org5138641" class="outline-3">
-<h3 id="org5138641">Sliding Window Count Algorithm</h3>
-<div class="outline-text-3" id="text-org5138641">
+<div id="outline-container-org7fc16d7" class="outline-3">
+<h3 id="org7fc16d7">Sliding Window Count Algorithm</h3>
+<div class="outline-text-3" id="text-org7fc16d7">
 <p>
 This is tweak on the above algorithm, with making it probabilistic but with very low probablity of error, and much simpler implemention.
 We take a assumption that the rate of request is uniform over a window. And we keep a count only for the total number of requests recieved for the current window, and previous window. That's only two variables for each user.
@@ -170,13 +172,13 @@ If you look at it, you would recognize it as a running average of the number of 
 </div>
 </div>
 
-<div id="outline-container-orgb123308" class="outline-2">
-<h2 id="orgb123308">Rate Limiter: The Caveats</h2>
-<div class="outline-text-2" id="text-orgb123308">
+<div id="outline-container-orgdae7765" class="outline-2">
+<h2 id="orgdae7765">Rate Limiter: The Caveats</h2>
+<div class="outline-text-2" id="text-orgdae7765">
 </div>
-<div id="outline-container-orgaec29ce" class="outline-3">
-<h3 id="orgaec29ce">Synchronization</h3>
-<div class="outline-text-3" id="text-orgaec29ce">
+<div id="outline-container-orga09534e" class="outline-3">
+<h3 id="orga09534e">Synchronization</h3>
+<div class="outline-text-3" id="text-orga09534e">
 <p>
 We could have too many requests for one rate limiter server to handle, for which we would need add multiple rate-limiter servers to filter requests. This would add the problem of data synchronization. Every request can go to random rate limiter which will make it diffcult to maintain the count of recieved request. One solution is to introduce sticky sessions where clients are redirected to a specific server for every server, but is easily isn't the best solution available.
 </p>
@@ -187,9 +189,9 @@ The better approach is to use a cache or a database where the servers can connec
 </div>
 </div>
 
-<div id="outline-container-orgcd9b8a6" class="outline-3">
-<h3 id="orgcd9b8a6">Race Conditions</h3>
-<div class="outline-text-3" id="text-orgcd9b8a6">
+<div id="outline-container-org4f0f18f" class="outline-3">
+<h3 id="org4f0f18f">Race Conditions</h3>
+<div class="outline-text-3" id="text-org4f0f18f">
 <p>
 For any of the above approaches, we would need to store data in a centralized data storage. This introduces the problem of race condition. Say two requests from a user came at the same time. We would first check the counter of user at the same time. Which will return the same value for both of the requests, (as they are read at the same time) which will allow the request to be incorrectly updated with +1 instead of +2.
 </p>
@@ -201,9 +203,9 @@ A common solution to this problem is making the process atmoic. We can achieve t
 </div>
 </div>
 
-<div id="outline-container-orgb25a862" class="outline-2">
-<h2 id="orgb25a862">Conclusion</h2>
-<div class="outline-text-2" id="text-orgb25a862">
+<div id="outline-container-org298eb9b" class="outline-2">
+<h2 id="org298eb9b">Conclusion</h2>
+<div class="outline-text-2" id="text-org298eb9b">
 <p>
 Never thought a simple queue would have such a list of details to explain for a simple functionality. But it's interesting to see the problems arise in a distributed system. Designing such system generally pose the problems of consistency and availabity. And a rate limiter, by a simple design isn't free of it either.
 </p>
@@ -227,7 +229,27 @@ Next post
 
         </div>
 
-    </nav></aside></article>
+    </nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                    <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="blank-manash-github-io-blog",
+            disqus_url="https://blank-manash.github.io/blog/posts/rate-limiter/",
+        disqus_title="Rate Limiter",
+        disqus_identifier="cache/posts/rate-limiter.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="blank-manash-github-io-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
             <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {

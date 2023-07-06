@@ -18,6 +18,7 @@ I am back to blogging after a long time. I have been busy with my work and a lon
 
 Admittedly, it was a big of discovery to find out how this blog actually worked. But to make sure that I can have it up and running again. Here is a bit of heads up on how to achieve that quick.
 
+{{{TEASER_END}}}
 *** Step 1: The Repository
 
 The repository is set up in ~blank-manash/blog~. To start, simply clone it to your system. It contains 2 branches, ~src~ and ~main~, the src is where we would be actively working on, and the ~main~ is from where the pages are published. Make sure you are checked out to the ~src~ branch when you are working on this.

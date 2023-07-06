@@ -13,7 +13,7 @@
 * Rate Limiter: The Why?
 
 Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
-
+{{{TEASER_END}}}
 * Rate Limiter: The How?
 
 Sure it seems simple enough to implement a Rate Limiting, with the requirements as simple as

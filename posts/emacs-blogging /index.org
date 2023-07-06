@@ -13,7 +13,7 @@
 * How I finally made a blog with org-mode.
 
 When I started off with development, one of the first tasks that you are typically supposed to do is make a blog. Me, a first year undergraduate completely new to the world of programming was handed a bunch of ~.js~ files with the expectation to build a blog out of it.
-
+{{{TEASER_END}}}
 And I did, eventually.
 
 Except for the tweaks in CSS, which I stole from other websites. There were massive problems with that blog.
