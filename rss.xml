@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Jun 2023 19:38:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Rate Limiter</title><link>https://blank-manash.github.io/blog/posts/rate-limiter/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgb6250a0" class="outline-2"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jul 2023 14:19:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How To Solve</title><link>https://blank-manash.github.io/blog/posts/how-to-solve/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orge01ffb2" class="outline-2"&gt;
+&lt;h2 id="orge01ffb2"&gt;Introduction&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge01ffb2"&gt;
+&lt;p&gt;
+This is a slight overview on how you should approach a problem based on my experience. And what are the things you should be ready be with if you are unable to solve it.
+&lt;/p&gt;
+
+&lt;p&gt;
+Some of Them are from the based on the book and additionally added by me.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org3b9742e" class="outline-2"&gt;
+&lt;h2 id="org3b9742e"&gt;Orientation&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3b9742e"&gt;
+&lt;p&gt;
+Reading the problem statement correctly is very important. It’s very easy to miss a few lines or misinterpret and completely miss the solution.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here are some points to get started.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb9f16b5" class="outline-3"&gt;
+&lt;h3 id="orgb9f16b5"&gt;Restate and Rephrase&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb9f16b5"&gt;
+&lt;p&gt;
+&lt;b&gt;Different Mathematical Models can lead you to different solutions.&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+This is fairly efficient in finding new approaches to
+a given problem. Trying to model on what is required, or simply &lt;i&gt;rewriting&lt;/i&gt; it in different mathematical notations or even form can reveal different strategies.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org702d9f0" class="outline-3"&gt;
+&lt;h3 id="org702d9f0"&gt;Fantasize an Answer&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org702d9f0"&gt;
+&lt;p&gt;
+Given an answer,
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;How does it comply with the constraints given?&lt;/li&gt;
+&lt;li&gt;How does it fails?&lt;/li&gt;
+&lt;li&gt;What new constraints (which also even can be rewritten or rephrased.) can be concluded?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgb2c0615" class="outline-3"&gt;
+&lt;h3 id="orgb2c0615"&gt;Keep Coming Back&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb2c0615"&gt;
+&lt;p&gt;
+In case of a hard problem, it can be the case you have missed a word or two because of which the problem seems impossible. Is the given graph just a tree with an extra edge? Keep coming back and read it again. It pays off.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org31aa81a" class="outline-2"&gt;
+&lt;h2 id="org31aa81a"&gt;Problem Solving&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org31aa81a"&gt;
+&lt;p&gt;
+This overall starts with defining the problem Structure of the given problem.This includes all the observable axioms and overall how the problem moves through different states. You have to observe the movement by getting your hands dirty and propose conjectures based on them. They need not be true or false but they must be proved.
+&lt;/p&gt;
+
+&lt;p&gt;
+Make claims, prove them, Or disprove them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orga1b0fa5" class="outline-2"&gt;
+&lt;h2 id="orga1b0fa5"&gt;Wishful Thinking And Make it Easier&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga1b0fa5"&gt;
+&lt;p&gt;
+&lt;i&gt;“If You can’t a solve a problem, there exists an easier version of it which you can, find it!” - Polya.&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Concentrate on the key difficulty of the problem. What makes it so tough? And what if I remove it. Then if you have a solution, can we extend it. What are the most obvious used ideas? A few strategies may include
+&lt;/p&gt;
+
+&lt;p&gt;
+• Make all the elements same.
+• Lower the Constraints
+• Making things monotonic.
+• Solving with The Extreme Principle.
+• Making Things symmetrical.
+• Increasing or Decreasing the number of invariant.
+• And the all powerful, Simplify.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb90099f" class="outline-2"&gt;
+&lt;h2 id="orgb90099f"&gt;Invariants and Monotonicity&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb90099f"&gt;
+&lt;p&gt;
+After the restate and rephrase part, try to notice what are the factors that do not change with time. Looking at the final result can also be very helpful for find invariants and mono-variants.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgcaa190a" class="outline-2"&gt;
+&lt;h2 id="orgcaa190a"&gt;Using Past Experiences, Reductions and Asking Questions&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgcaa190a"&gt;
+&lt;p&gt;
+Reduction is the method to convert a problem statement into a reduced problem statement. In easy problems, you'd find problems being reduced to very standards problems we know of.
+&lt;/p&gt;
+
+&lt;p&gt;
+Asking relevant questions lead us to observations, these observations are then used tranpose the problem statement into something we already know and can work upon.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/how-to-solve/</guid><pubDate>Thu, 06 Jul 2023 14:18:23 GMT</pubDate></item><item><title>Rate Limiter</title><link>https://blank-manash.github.io/blog/posts/rate-limiter/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgb6250a0" class="outline-2"&gt;
 &lt;h2 id="orgb6250a0"&gt;Rate Limiter: The Why?&lt;/h2&gt;
 &lt;div class="outline-text-2" id="text-orgb6250a0"&gt;
 &lt;p&gt;

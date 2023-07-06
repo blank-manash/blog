@@ -11,7 +11,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://blank-manash.github.io/blog/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/rate-limiter/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/how-to-solve/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -65,7 +65,137 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rate-limiter/" class="u-url">Rate Limiter</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/how-to-solve/" class="u-url">How To Solve</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Manash Baul
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/how-to-solve/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-07-06T19:48:23+05:30" itemprop="datePublished" title="2023-07-06 19:48">2023-07-06 19:48</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div id="outline-container-orge01ffb2" class="outline-2">
+<h2 id="orge01ffb2">Introduction</h2>
+<div class="outline-text-2" id="text-orge01ffb2">
+<p>
+This is a slight overview on how you should approach a problem based on my experience. And what are the things you should be ready be with if you are unable to solve it.
+</p>
+
+<p>
+Some of Them are from the based on the book and additionally added by me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b9742e" class="outline-2">
+<h2 id="org3b9742e">Orientation</h2>
+<div class="outline-text-2" id="text-org3b9742e">
+<p>
+Reading the problem statement correctly is very important. It’s very easy to miss a few lines or misinterpret and completely miss the solution.
+</p>
+
+<p>
+Here are some points to get started.
+</p>
+</div>
+
+<div id="outline-container-orgb9f16b5" class="outline-3">
+<h3 id="orgb9f16b5">Restate and Rephrase</h3>
+<div class="outline-text-3" id="text-orgb9f16b5">
+<p>
+<b>Different Mathematical Models can lead you to different solutions.</b>
+</p>
+
+<p>
+This is fairly efficient in finding new approaches to
+a given problem. Trying to model on what is required, or simply <i>rewriting</i> it in different mathematical notations or even form can reveal different strategies.
+</p>
+</div>
+</div>
+<div id="outline-container-org702d9f0" class="outline-3">
+<h3 id="org702d9f0">Fantasize an Answer</h3>
+<div class="outline-text-3" id="text-org702d9f0">
+<p>
+Given an answer,
+</p>
+<ul class="org-ul">
+<li>How does it comply with the constraints given?</li>
+<li>How does it fails?</li>
+<li>What new constraints (which also even can be rewritten or rephrased.) can be concluded?</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb2c0615" class="outline-3">
+<h3 id="orgb2c0615">Keep Coming Back</h3>
+<div class="outline-text-3" id="text-orgb2c0615">
+<p>
+In case of a hard problem, it can be the case you have missed a word or two because of which the problem seems impossible. Is the given graph just a tree with an extra edge? Keep coming back and read it again. It pays off.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31aa81a" class="outline-2">
+<h2 id="org31aa81a">Problem Solving</h2>
+<div class="outline-text-2" id="text-org31aa81a">
+<p>
+This overall starts with defining the problem Structure of the given problem.This includes all the observable axioms and overall how the problem moves through different states. You have to observe the movement by getting your hands dirty and propose conjectures based on them. They need not be true or false but they must be proved.
+</p>
+
+<p>
+Make claims, prove them, Or disprove them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1b0fa5" class="outline-2">
+<h2 id="orga1b0fa5">Wishful Thinking And Make it Easier</h2>
+<div class="outline-text-2" id="text-orga1b0fa5">
+<p>
+<i>“If You can’t a solve a problem, there exists an easier version of it which you can, find it!” - Polya.</i>
+</p>
+
+<p>
+Concentrate on the key difficulty of the problem. What makes it so tough? And what if I remove it. Then if you have a solution, can we extend it. What are the most obvious used ideas? A few strategies may include
+</p>
+
+<p>
+• Make all the elements same.
+• Lower the Constraints
+• Making things monotonic.
+• Solving with The Extreme Principle.
+• Making Things symmetrical.
+• Increasing or Decreasing the number of invariant.
+• And the all powerful, Simplify.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb90099f" class="outline-2">
+<h2 id="orgb90099f">Invariants and Monotonicity</h2>
+<div class="outline-text-2" id="text-orgb90099f">
+<p>
+After the restate and rephrase part, try to notice what are the factors that do not change with time. Looking at the final result can also be very helpful for find invariants and mono-variants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcaa190a" class="outline-2">
+<h2 id="orgcaa190a">Using Past Experiences, Reductions and Asking Questions</h2>
+<div class="outline-text-2" id="text-orgcaa190a">
+<p>
+Reduction is the method to convert a problem statement into a reduced problem statement. In easy problems, you'd find problems being reduced to very standards problems we know of.
+</p>
+
+<p>
+Asking relevant questions lead us to observations, these observations are then used tranpose the problem statement into something we already know and can work upon.
+</p>
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rate-limiter/" class="u-url">Rate Limiter</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Manash Baul
