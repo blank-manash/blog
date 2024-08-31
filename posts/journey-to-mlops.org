@@ -1,0 +1,78 @@
+#+BEGIN_COMMENT
+.. title: Journey to MLOps
+.. slug: journey-to-mlops
+.. date: 2024-08-31 12:12:57 UTC+05:30
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Data Engineering vs Backend
+
+When I started my career in software engineering, the first team that I worked with was a Data Analytics Team.
+
+The primary product of that team was to provide a semantic unified layer across multiple data sources in the company. This enabled business analysts to have a drag and drop interface, report scheduling capabilites, and custom made fields for all their business queries.
+
+However we were not responsible for the actual data. The part where data is loaded into the data lake was the responsibility of respective teams. We have a architecture that composed of the following.
+
+- UI / Middleware
+- Query Semantic Parsing
+- Data Fetch
+- Post Fetch Processing
+
+{{{TEASER_END}}}
+
+We have a couple of microservices to handle each part of the process. The most important and the prominent of those was the query parser. It's was open-sourced as Apache Lens and was built on top of Hive.
+
+It allowed creation of custom schemas that could plug and played across different data sources, i.e this would allow you to migrate from snowflake to databricks with very minimal code changes.
+
+* MLOps
+
+During my experience I had the privilege to work building LLM systems for automation. It was the era where ChatGPT was booming and all kinds of innovation around LLMs were being explored. We were able to make a system that provided automation for media ads. This included campaign generation, keywords removal, bid aggregation and other reporting needs.
+
+*LLM and Models*. I noticed the overuse of LLMs quickly. Almost any problem that could be solved was offloaded to LLMs. That felt very inefficient and we were facing multiple issues from LLMs responses which caused us resort to higher SLAs.
+
+One particular classification problem held my notice. It was to categorize a given keyword based on a content as "Broad", "Exact" or "Phrase" match. Instead of using LLMs, I was able to solve this problem using NLP Vectors and similarities. This meant a much faster process time and cost in tokens saved.
+
+** Working with AI Models
+
+The field of ML Engineering intends to provide the infrastructure to continuously build, test and deploy models. Due the nature of business, there are two major problems regarding Advertising DSPs.
+
+- *Stale Data*. Advertising Data may get stale overtime. A model trained over the past week data will perform differently compared to last month. We need a way to train models with different data window.
+
+- *Experimentation*. We often need to run multiple experiments involving different hyper parameters. This requires having a system in place to redirect traffic across the models. The reporting of this is also crucial in order to successfully draw inference.
+
+
+To deal with problem, the entire ML workflow is spread across two different domains.
+
+** Serving
+
+This is the part where the models are deployed to draw inferences. It typically consists of a web-server hosting the ML model (example Tensorflow) and a service layer on top of it for traffic balancing / logging etc. In latency sensitive systems it's ideal to use the service as a SDK to minimize the network calls.
+
+Models ready for deployment have the computation graph planned out. This can result in many optimization techniques. One of many is _ONNX_ Runtime, which optimizes the runtime.
+
+** Training
+
+Training of AI Models the most challenge in terms of expense and time taken. In terms of system requirements, we have the following
+
+- Data Pipelines of EDA and Training
+- Clustered Computation
+- Fault Tolerance and Checkpoints
+
+ML Training can be expensive based on the data size and hardware used. Having a strong checkpointing system can help reduce re-computation in case of failures. One classic techniques to reduce cost was to use Spot VM instances.
+
+Spot Instances come 90% cheaper compared to standard VMs. Clustered Computing Frameworks like Ray can be configured with _Restore_ to rely on spot and regular nodes. This can significantly reduce cost without increasing training time by a high margin.
+
+Accelerators in training is a much harder problem than serving. This is due to the fact of computation graph not being precomputed to optimize. In this case, hardware accelerators like SIMD, AVX2 can be used with caution.
+
+Tensorflow models supports a lot of these instructions. However they require specific hardware to run and special attention should be provided to the configuration of the clusters they are running on.
+
+* Conclusion
+
+There are multiple initiatives to improve ML Operations in a business. The core ideas remain the same. Experimentation, Data Analysis, Short Deployment Cycles and Feature Adjustments.
+
+While a significant number of techniques are ommited here, this serves a good starting point for someone looking to set up their own infrastructure in ML. 
+
