@@ -231,8 +231,8 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.org", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.org", "pages", "page.tmpl"),
