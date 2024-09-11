@@ -137,14 +137,28 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
+# Default Config
+# NAVIGATION_LINKS = {
+#     DEFAULT_LANG: (
+#         ("https://github.com/blank-manash/", "Github"),
+#         ("https://linkedin.com/in/manash-baul/", "LinkedIn"),
+#         ("/archive.html", "Archive"),
+#         ("/categories/", "Tags"),
+#     ),
+# }
+
+# Config for Zen Theme
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("https://github.com/blank-manash/", "Github"),
-        ("https://linkedin.com/in/manash-baul/", "LinkedIn"),
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-    ),
+        ('/index.html', 'Home', 'fa fa-home'),
+        ('/archive.html', 'Archives', 'fa fa-folder-open'),
+        ('/categories/', 'Tags', 'fa fa-tags'),
+        ("https://github.com/blank-manash/", "Github", "fab fa-github"),
+        ("https://linkedin.com/in/manash-baul/", "LinkedIn", "fab fa-linkedin"),
+    )
 }
+
+DATE_FANCINESS = 2
 
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
@@ -154,7 +168,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "hyde"
+THEME = "zen"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
