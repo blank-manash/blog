@@ -2,7 +2,8 @@
 .. title: Rate Limiter
 .. slug: rate-limiter
 .. date: 2023-06-19 01:08:08 UTC+05:30
-.. tags: 
+.. tags: system-design
+.. has_math: true
 .. category: 
 .. link: 
 .. description: 
@@ -18,7 +19,7 @@ Rate Limiters are fundamental tools in order to facilitate security measures aga
 
 Sure it seems simple enough to implement a Rate Limiting, with the requirements as simple as
 
- - Only an ~x~ number of requests are allowed from a host / IP / user per minute.
+ - Only an \(x\) number of requests are allowed from a host / IP / user per minute.
 
 But as always, there are some caveats, and this blog is about that caveats. To being with, let's look at how we can implement such a service. We are assuming the rate limiter service will be included as an middleware with the API Gateway which redirects requests to the web server.
 
@@ -62,7 +63,10 @@ This is a deterministic algorithm will accurate results. This doesn't impose a f
 This is tweak on the above algorithm, with making it probabilistic but with very low probablity of error, and much simpler implemention.
 We take a assumption that the rate of request is uniform over a window. And we keep a count only for the total number of requests recieved for the current window, and previous window. That's only two variables for each user.
 
-Now the trick, we count the total number of request of an interval as ~x * a + y * b~.
+Now the trick, we count the total number of request of an interval as:
+$$
+ax+by
+$$
 - ~x~: Percentage of overlap of the last window.
 - ~a~: Number of requests recieved in the last window.
 - ~y~: Percentage of overlap of the current window.
