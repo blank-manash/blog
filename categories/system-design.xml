@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome (Posts about system-design)</title><link>https://blank-manash.github.io/blog/</link><description></description><atom:link href="https://blank-manash.github.io/blog/categories/system-design.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Sep 2024 14:04:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Designing a Chat Application</title><link>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Overview and Requirements&lt;/h2&gt;
+&lt;p&gt;We are going to design a chat application that will allow users to send messages to each other. The chat application should support the following requirements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;One to One Chat: Users should be able to send messages to other users.&lt;/li&gt;
+&lt;li&gt;Group Chat: Users should be able to create groups and send messages to all group members.&lt;/li&gt;
+&lt;li&gt;Push Notifications: Users should be able to receive push notifications for new messages.&lt;/li&gt;
+&lt;li&gt;Online Status: Users should be able to see the online status of other users.&lt;/li&gt;
+&lt;li&gt;Read Receipts: Users should be able to see if their messages have been read by the recipients.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/designing-a-chat-application/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>system-design</category><guid>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</guid><pubDate>Fri, 13 Sep 2024 13:24:30 GMT</pubDate></item><item><title>Rate Limiter</title><link>https://blank-manash.github.io/blog/posts/rate-limiter/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org65e43f0" class="outline-2"&gt;
+&lt;h2 id="org65e43f0"&gt;Rate Limiter: The Why?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org65e43f0"&gt;
+&lt;p&gt;
+Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/rate-limiter/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>system-design</category><guid>https://blank-manash.github.io/blog/posts/rate-limiter/</guid><pubDate>Sun, 18 Jun 2023 19:38:08 GMT</pubDate></item></channel></rss>

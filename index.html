@@ -12,7 +12,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://blank-manash.github.io/blog/">
-<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prefetch" href="posts/concurrent-programming-problems/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prefetch" href="posts/designing-a-chat-application/" type="text/html">
 </head>
 <body>
     <a href="#page-content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -34,7 +34,34 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/concurrent-programming-problems/" class="u-url">Concurrent Programming Problems</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/designing-a-chat-application/" class="u-url">Designing a Chat Application</a></h1>
+        <div class="metadata">
+            <p class="dateline"><a href="posts/designing-a-chat-application/" rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2024-09-13T18:54:30+05:30" title="2024-09-13 18:54">2024-09-13 18:54</time></a></p>
+            <p class="byline author vcard"> <i class="fa fa-user"></i> <span class="byline-name fn" itemprop="author">
+                Manash Baul
+            </span></p>
+                <p class="commentline"><i class="fa fa-comment"></i> 
+    
+    <a href="posts/designing-a-chat-application/#disqus_thread" data-disqus-identifier="cache/posts/designing-a-chat-application.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<h2>Overview and Requirements</h2>
+<p>We are going to design a chat application that will allow users to send messages to each other. The chat application should support the following requirements:</p>
+<ol>
+<li>One to One Chat: Users should be able to send messages to other users.</li>
+<li>Group Chat: Users should be able to create groups and send messages to all group members.</li>
+<li>Push Notifications: Users should be able to receive push notifications for new messages.</li>
+<li>Online Status: Users should be able to see the online status of other users.</li>
+<li>Read Receipts: Users should be able to see if their messages have been read by the recipients.</li>
+</ol>
+<p class="more"><a href="posts/designing-a-chat-application/">Read more…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/concurrent-programming-problems/" class="u-url">Concurrent Programming Problems</a></h1>
         <div class="metadata">
             <p class="dateline"><a href="posts/concurrent-programming-problems/" rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2024-09-11T14:32:29+05:30" title="2024-09-11 14:32">2024-09-11 14:32</time></a></p>
             <p class="byline author vcard"> <i class="fa fa-user"></i> <span class="byline-name fn" itemprop="author">
@@ -136,9 +163,9 @@ Some of Them are from the based on the book and additionally added by me.
         </p>
 </div>
     </header><div class="p-summary entry-summary">
-    <div id="outline-container-org88e0848" class="outline-2">
-<h2 id="org88e0848">Rate Limiter: The Why?</h2>
-<div class="outline-text-2" id="text-org88e0848">
+    <div id="outline-container-org65e43f0" class="outline-2">
+<h2 id="org65e43f0">Rate Limiter: The Why?</h2>
+<div class="outline-text-2" id="text-org65e43f0">
 <p>
 Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
 </p>
@@ -210,7 +237,9 @@ When I started off with development, one of the first tasks that you are typical
 
 
     
-       <script>var disqus_shortname="blank-manash-github-io-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2024         <a href="mailto:mximpaid@gmail.com">Manash Baul</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+       <script>var disqus_shortname="blank-manash-github-io-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script><footer id="footer"><p>Contents © 2024         <a href="mailto:mximpaid@gmail.com">Manash Baul</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>

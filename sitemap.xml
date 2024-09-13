@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/archive.html</loc>
-  <lastmod>2024-09-11T21:25:00Z</lastmod>
+  <lastmod>2024-09-13T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/</loc>
-  <lastmod>2023-06-17T12:19:00Z</lastmod>
+  <lastmod>2024-09-13T13:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/categories/blogging/</loc>
@@ -40,6 +40,10 @@
  <url>
   <loc>https://blank-manash.github.io/blog/categories/emacs/</loc>
   <lastmod>2023-06-17T12:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blank-manash.github.io/blog/categories/system-design/</loc>
+  <lastmod>2024-09-13T13:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/galleries/</loc>
@@ -64,6 +68,10 @@
  <url>
   <loc>https://blank-manash.github.io/blog/posts/concurrent-programming-problems/</loc>
   <lastmod>2024-09-11T10:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</loc>
+  <lastmod>2024-09-13T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</loc>
