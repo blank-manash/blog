@@ -79,10 +79,12 @@ Users can request elevators from any floor (hall call) and select th">
 <p><img alt="image" src="../../images/elevator_class_diagram.png"></p>
 <h2>Implementation</h2>
 <h4>ElevatorSystem</h4>
-<p>ElevatorSystem Singleton Class:
-* Manages all elevators and handles requests.
-* Uses the Singleton pattern to ensure only one instance exists.
-* Delegates scheduling to a Scheduler interface.</p>
+<p>ElevatorSystem Singleton Class:</p>
+<ul>
+<li>Manages all elevators and handles requests.</li>
+<li>Uses the Singleton pattern to ensure only one instance exists.</li>
+<li>Delegates scheduling to a Scheduler interface.</li>
+</ul>
 <div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
 
@@ -127,10 +129,12 @@ Users can request elevators from any floor (hall call) and select th">
 </pre></div>
 
 <h4>Elevator</h4>
-<p>Elevator Class:
-- Represents an individual elevator.
-- Maintains its current state and requested floors.
-- Implements movement logic.</p>
+<p>Elevator Class:</p>
+<ul>
+<li>Represents an individual elevator.</li>
+<li>Maintains its current state and requested floors.</li>
+<li>Implements movement logic.</li>
+</ul>
 <div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.PriorityQueue</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Elevator</span><span class="w"> </span><span class="p">{</span>
@@ -200,9 +204,11 @@ Users can request elevators from any floor (hall call) and select th">
 </pre></div>
 
 <h4>Scheduler / Dispatcher</h4>
-<p>Scheduler Interface and DefaultScheduler:
-* Strategy pattern allows different scheduling algorithms.
-* DefaultScheduler provides a basic implementation.</p>
+<p>Scheduler Interface and DefaultScheduler:</p>
+<ul>
+<li>Strategy pattern allows different scheduling algorithms.</li>
+<li>DefaultScheduler provides a basic implementation.</li>
+</ul>
 <div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Scheduler</span><span class="w"> </span><span class="p">{</span>
