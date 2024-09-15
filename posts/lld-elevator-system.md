@@ -27,6 +27,7 @@
 ### ElevatorSystem
 
 ElevatorSystem Singleton Class:
+
 * Manages all elevators and handles requests.
 * Uses the Singleton pattern to ensure only one instance exists.
 * Delegates scheduling to a Scheduler interface.
@@ -78,9 +79,10 @@ public class ElevatorSystem {
 ### Elevator
 
 Elevator Class:
-- Represents an individual elevator.
-- Maintains its current state and requested floors.
-- Implements movement logic.
+
+* Represents an individual elevator.
+* Maintains its current state and requested floors.
+* Implements movement logic.
 
 ```java
 import java.util.PriorityQueue;
@@ -155,6 +157,7 @@ public class Elevator {
 ### Scheduler / Dispatcher
 
 Scheduler Interface and DefaultScheduler:
+
 * Strategy pattern allows different scheduling algorithms.
 * DefaultScheduler provides a basic implementation.
 
