@@ -68,33 +68,33 @@ Rate Limiters are fundamental tools in order to facilitate security measures aga
 
         </div>
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org65e43f0" class="outline-2">
-<h2 id="org65e43f0">Rate Limiter: The Why?</h2>
-<div class="outline-text-2" id="text-org65e43f0">
+    <div id="outline-container-orgcd911c7" class="outline-2">
+<h2 id="orgcd911c7">Rate Limiter: The Why?</h2>
+<div class="outline-text-2" id="text-orgcd911c7">
 <p>
 Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
 </p>
 <!-- TEASER_END -->
 </div>
 </div>
-<div id="outline-container-org23d5ffe" class="outline-2">
-<h2 id="org23d5ffe">Rate Limiter: The How?</h2>
-<div class="outline-text-2" id="text-org23d5ffe">
+<div id="outline-container-orgc869b0d" class="outline-2">
+<h2 id="orgc869b0d">Rate Limiter: The How?</h2>
+<div class="outline-text-2" id="text-orgc869b0d">
 <p>
 Sure it seems simple enough to implement a Rate Limiting, with the requirements as simple as
 </p>
 
 <ul class="org-ul">
-<li>Only an \(x\) number of requests are allowed from a host / IP / user per minute.</li>
+<li>Only an <code>x</code> number of requests are allowed from a host / IP / user per minute.</li>
 </ul>
 <p>
 But as always, there are some caveats, and this blog is about that caveats. To being with, let's look at how we can implement such a service. We are assuming the rate limiter service will be included as an middleware with the API Gateway which redirects requests to the web server.
 </p>
 </div>
 
-<div id="outline-container-org18980c7" class="outline-3">
-<h3 id="org18980c7">Token Buckets</h3>
-<div class="outline-text-3" id="text-org18980c7">
+<div id="outline-container-org42066e1" class="outline-3">
+<h3 id="org42066e1">Token Buckets</h3>
+<div class="outline-text-3" id="text-org42066e1">
 <p>
 Imagine we have a bucket, and we have it filled with some coins. Each request to pass through, requires 1 coin from it's bucket. If the bucket is empty, we drop the request. We also add a constant number of coins every second.
 </p>
@@ -116,9 +116,9 @@ Although being simple and effective, the idea has a major flaw. It's is highly <
 </div>
 </div>
 
-<div id="outline-container-org01a168b" class="outline-3">
-<h3 id="org01a168b">Leaky Buckets</h3>
-<div class="outline-text-3" id="text-org01a168b">
+<div id="outline-container-orgc90a0b1" class="outline-3">
+<h3 id="orgc90a0b1">Leaky Buckets</h3>
+<div class="outline-text-3" id="text-orgc90a0b1">
 <p>
 The idea is same, however instead of refilling the bucket every second, we replace the entire bucket with a queue. The queue has a fixed capacity, and for every request that comes in, we check if the queue is in capacity. If it is, we drop the request.
 </p>
@@ -129,9 +129,9 @@ This is a much better approach then the previous one as we don't have to constan
 </div>
 </div>
 
-<div id="outline-container-org19f015b" class="outline-3">
-<h3 id="org19f015b">Sliding Window Log Algorithm</h3>
-<div class="outline-text-3" id="text-org19f015b">
+<div id="outline-container-orgbb03b27" class="outline-3">
+<h3 id="orgbb03b27">Sliding Window Log Algorithm</h3>
+<div class="outline-text-3" id="text-orgbb03b27">
 <p>
 This is the first approach that came to me when I first looked at the problem statement. The idea is same as before, to create a queue, but of timestamps.
 </p>
@@ -155,19 +155,16 @@ This is a deterministic algorithm will accurate results. This doesn't impose a f
 </div>
 </div>
 
-<div id="outline-container-orga3420f3" class="outline-3">
-<h3 id="orga3420f3">Sliding Window Count Algorithm</h3>
-<div class="outline-text-3" id="text-orga3420f3">
+<div id="outline-container-org9cf837e" class="outline-3">
+<h3 id="org9cf837e">Sliding Window Count Algorithm</h3>
+<div class="outline-text-3" id="text-org9cf837e">
 <p>
 This is tweak on the above algorithm, with making it probabilistic but with very low probablity of error, and much simpler implemention.
 We take a assumption that the rate of request is uniform over a window. And we keep a count only for the total number of requests recieved for the current window, and previous window. That's only two variables for each user.
 </p>
 
 <p>
-Now the trick, we count the total number of request of an interval as:
-\[
-ax+by
-\]
+Now the trick, we count the total number of request of an interval as <code>x * a + y * b</code>.
 </p>
 <ul class="org-ul">
 <li>
@@ -186,13 +183,13 @@ If you look at it, you would recognize it as a running average of the number of 
 </div>
 </div>
 
-<div id="outline-container-org0e8767f" class="outline-2">
-<h2 id="org0e8767f">Rate Limiter: The Caveats</h2>
-<div class="outline-text-2" id="text-org0e8767f">
+<div id="outline-container-org0e66aa7" class="outline-2">
+<h2 id="org0e66aa7">Rate Limiter: The Caveats</h2>
+<div class="outline-text-2" id="text-org0e66aa7">
 </div>
-<div id="outline-container-org4ade7ae" class="outline-3">
-<h3 id="org4ade7ae">Synchronization</h3>
-<div class="outline-text-3" id="text-org4ade7ae">
+<div id="outline-container-org109d087" class="outline-3">
+<h3 id="org109d087">Synchronization</h3>
+<div class="outline-text-3" id="text-org109d087">
 <p>
 We could have too many requests for one rate limiter server to handle, for which we would need add multiple rate-limiter servers to filter requests. This would add the problem of data synchronization. Every request can go to random rate limiter which will make it diffcult to maintain the count of recieved request. One solution is to introduce sticky sessions where clients are redirected to a specific server for every server, but is easily isn't the best solution available.
 </p>
@@ -203,9 +200,9 @@ The better approach is to use a cache or a database where the servers can connec
 </div>
 </div>
 
-<div id="outline-container-org527ca8c" class="outline-3">
-<h3 id="org527ca8c">Race Conditions</h3>
-<div class="outline-text-3" id="text-org527ca8c">
+<div id="outline-container-orgbd8bce2" class="outline-3">
+<h3 id="orgbd8bce2">Race Conditions</h3>
+<div class="outline-text-3" id="text-orgbd8bce2">
 <p>
 For any of the above approaches, we would need to store data in a centralized data storage. This introduces the problem of race condition. Say two requests from a user came at the same time. We would first check the counter of user at the same time. Which will return the same value for both of the requests, (as they are read at the same time) which will allow the request to be incorrectly updated with +1 instead of +2.
 </p>
@@ -217,9 +214,9 @@ A common solution to this problem is making the process atmoic. We can achieve t
 </div>
 </div>
 
-<div id="outline-container-org7c22697" class="outline-2">
-<h2 id="org7c22697">Conclusion</h2>
-<div class="outline-text-2" id="text-org7c22697">
+<div id="outline-container-org04d3a4a" class="outline-2">
+<h2 id="org04d3a4a">Conclusion</h2>
+<div class="outline-text-2" id="text-org04d3a4a">
 <p>
 Never thought a simple queue would have such a list of details to explain for a simple functionality. But it's interesting to see the problems arise in a distributed system. Designing such system generally pose the problems of consistency and availabity. And a rate limiter, by a simple design isn't free of it either.
 </p>
