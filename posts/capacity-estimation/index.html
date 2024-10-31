@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html prefix="
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emacsome · Capacity Estimation </title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://blank-manash.github.io/blog/posts/capacity-estimation/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Manash Baul">
+<link rel="prev" href="../a-generic-approach-to-lld-problems/" title="A Generic Approach to LLD Problems" type="text/html">
+</head>
+<body class="">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    <div class="hsidebar">
+        <div class="container sidebar-sticky">
+            <div class="sidebar-about">
+              <h1>
+                <a href="https://blank-manash.github.io/blog/">
+                      <h1 id="brand"><a href="https://blank-manash.github.io/blog/" title="Emacsome" rel="home">
+
+        <span id="blog-title">Emacsome</span>
+    </a></h1>
+
+                </a>
+              </h1>
+                <p class="lead">A Technical Blog About On Software and Mathematics</p>
+
+            </div>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="https://github.com/blank-manash/">Github</a>
+        <a class="sidebar-nav-item" href="https://linkedin.com/in/manash-baul/">LinkedIn</a>
+        <a class="sidebar-nav-item" href="../../archive.html">Archive</a>
+        <a class="sidebar-nav-item" href="../../categories/">Tags</a>
+    
+    
+    </nav><footer id="footer"><span class="copyright">
+              Contents © 2024         <a href="mailto:mximpaid@gmail.com">Manash Baul</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            </span>
+            
+            
+        </footer>
+</div>
+    </div>
+
+    <div class="content container" id="content">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">Capacity Estimation</a></h1>
+
+    <span class="post-date">
+      <time class="published dt-published" datetime="2024-10-31T17:53:19+05:30" itemprop="datePublished" title="2024-10-31 17:53">2024-10-31 17:53</time></span>
+
+    
+    
+
+    <div class="e-content entry-content" itemprop="articleBody text">
+    <p>This guide provides a concise overview of storage and compute estimation, common sizes, and solutions by scale for system design interviews and real-world applications.</p>
+<!-- TEASER_END -->
+<hr>
+<h3>1. Storage Estimation</h3>
+<h4>Key Estimations for Storage:</h4>
+<table>
+<thead><tr>
+<th><strong>Item</strong></th>
+<th><strong>Avg Size</strong></th>
+<th><strong>Examples</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Text Message</strong></td>
+<td>~50 bytes</td>
+<td>Chat messages</td>
+</tr>
+<tr>
+<td><strong>Tweet</strong></td>
+<td>~200 bytes</td>
+<td>Includes hashtags, metadata</td>
+</tr>
+<tr>
+<td><strong>User Profile</strong></td>
+<td>~1-5 KB</td>
+<td>Profile info, settings, and preferences</td>
+</tr>
+<tr>
+<td><strong>Image (compressed)</strong></td>
+<td>~100-500 KB</td>
+<td>JPG/PNG, low to medium resolution</td>
+</tr>
+<tr>
+<td><strong>Video (1 min)</strong></td>
+<td>~5-10 MB</td>
+<td>Compressed, e.g., 720p</td>
+</tr>
+<tr>
+<td><strong>Log Entry</strong></td>
+<td>~100 bytes</td>
+<td>Timestamp, log level, message</td>
+</tr>
+<tr>
+<td><strong>Sensor Data Point</strong></td>
+<td>~100 bytes</td>
+<td>IoT data with metadata</td>
+</tr>
+<tr>
+<td><strong>Machine Learning Model</strong></td>
+<td>~100 MB - 1 GB</td>
+<td>Simple to complex models</td>
+</tr>
+</tbody>
+</table>
+<h4>Storage Solutions by Scale:</h4>
+<table>
+<thead><tr>
+<th><strong>Data Volume</strong></th>
+<th><strong>Suggested Solution</strong></th>
+<th><strong>Examples</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>&lt; 10 GB</strong></td>
+<td>Single DB Instance</td>
+<td>MySQL, PostgreSQL</td>
+</tr>
+<tr>
+<td><strong>10 GB - 1 TB</strong></td>
+<td>Partitioned DB or file storage</td>
+<td>PostgreSQL, AWS S3</td>
+</tr>
+<tr>
+<td><strong>1 TB - 100 TB</strong></td>
+<td>Distributed storage or sharded DB</td>
+<td>MongoDB, Cassandra, HDFS</td>
+</tr>
+<tr>
+<td><strong>&gt; 100 TB</strong></td>
+<td>Data lake or distributed file system</td>
+<td>AWS S3, Hadoop HDFS</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>2. Compute Estimation</h3>
+<h4>Key Estimations for Compute:</h4>
+<ul>
+<li>
+<strong>QPS Calculation</strong>: \( \text{QPS} = \frac{\text{DAU} \times \text{Actions/User}}{86,400} \)</li>
+<li>
+<strong>Peak Load</strong>: Generally 3-5x the average QPS for consumer applications.</li>
+<li>
+<strong>Example</strong>: 1M DAU with 20 actions/day → \( \approx 20 \) QPS avg, ~100 QPS peak.</li>
+</ul>
+<h4>Compute Solutions by Scale:</h4>
+<table>
+<thead><tr>
+<th><strong>QPS</strong></th>
+<th><strong>Suggested Solution</strong></th>
+<th><strong>Examples</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>&lt; 100 QPS</strong></td>
+<td>Single server or small cluster</td>
+<td>EC2 instance, Kubernetes pod</td>
+</tr>
+<tr>
+<td><strong>100 - 1000 QPS</strong></td>
+<td>Autoscaling cluster</td>
+<td>AWS ECS, GCP Compute Engine</td>
+</tr>
+<tr>
+<td><strong>1000 - 10,000 QPS</strong></td>
+<td>Load-balanced cluster with caching</td>
+<td>Redis, Kubernetes, Load balancer</td>
+</tr>
+<tr>
+<td><strong>&gt; 10,000 QPS</strong></td>
+<td>Distributed, multi-region setup</td>
+<td>Global load balancers, sharded DB</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>Common Use Case Scenarios</h3>
+<table>
+<thead><tr>
+<th><strong>Scenario</strong></th>
+<th><strong>Estimated Usage</strong></th>
+<th><strong>Solution</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>1M DAU Chat App</strong></td>
+<td>~20 QPS peak, ~1 GB/day</td>
+<td>Autoscaling, Redis cache</td>
+</tr>
+<tr>
+<td><strong>50M Tweets/Day</strong></td>
+<td>~600 QPS avg, 2.5 TB/year</td>
+<td>Sharded DB, multi-region storage</td>
+</tr>
+<tr>
+<td><strong>10K QPS E-commerce</strong></td>
+<td>~500 MB/s data throughput</td>
+<td>Load balancing, distributed caching</td>
+</tr>
+<tr>
+<td><strong>1 PB Data Lake</strong></td>
+<td>~100 TB/month growth</td>
+<td>Data lake, e.g., S3, Hadoop HDFS</td>
+</tr>
+<tr>
+<td><strong>100M Video Views/Day</strong></td>
+<td>~1 PB storage monthly, 2 Gbps peak</td>
+<td>CDN, global load balancer</td>
+</tr>
+<tr>
+<td><strong>5M User Transactions/Day</strong></td>
+<td>~50 QPS avg, 5 TB storage/year</td>
+<td>Sharded RDBMS, caching, high consistency</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>Quick Calculation Tips</h4>
+<ul>
+<li>
+<strong>Time Conversions</strong>:</li>
+<li>1 day ≈ 10^5 seconds, 1 month ≈ 10^6 seconds</li>
+<li>
+<strong>Bytes Conversions</strong>:</li>
+<li>1 KB ≈ 10^3 bytes, 1 MB ≈ 10^6 bytes, 1 GB ≈ 10^9 bytes, 1 TB ≈ 10^12 bytes</li>
+</ul>
+<h4>Bytes to Powers of 10 Conversion Table</h4>
+<table>
+<thead><tr>
+<th><strong>Unit</strong></th>
+<th><strong>In Powers of 10</strong></th>
+<th><strong>Approximation</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Kilobyte (KB)</strong></td>
+<td>\( 10^3 \)</td>
+<td>1 thousand bytes</td>
+</tr>
+<tr>
+<td><strong>Megabyte (MB)</strong></td>
+<td>\( 10^6 \)</td>
+<td>1 million bytes</td>
+</tr>
+<tr>
+<td><strong>Gigabyte (GB)</strong></td>
+<td>\( 10^9 \)</td>
+<td>1 billion bytes</td>
+</tr>
+<tr>
+<td><strong>Terabyte (TB)</strong></td>
+<td>\( 10^{12} \)</td>
+<td>1 trillion bytes</td>
+</tr>
+<tr>
+<td><strong>Petabyte (PB)</strong></td>
+<td>\( 10^{15} \)</td>
+<td>1 quadrillion bytes</td>
+</tr>
+<tr>
+<td><strong>Exabyte (EB)</strong></td>
+<td>\( 10^{18} \)</td>
+<td>1 quintillion bytes</td>
+</tr>
+</tbody>
+</table>
+</div>
+    <aside class="postpromonav"><nav><div class="pager hidden-print pagination">
+
+            <span class="previous pagination-item older">
+                <a href="../a-generic-approach-to-lld-problems/" rel="prev" title="A Generic Approach to LLD Problems">
+                Previous post
+                </a>
+            </span>
+
+
+            <span class="next pagination-item newer">
+Next post
+            </span>
+
+        </div>
+
+    </nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                    <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="blank-manash-github-io-blog",
+            disqus_url="https://blank-manash.github.io/blog/posts/capacity-estimation/",
+        disqus_title="Capacity Estimation",
+        disqus_identifier="cache/posts/capacity-estimation.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article><script>var disqus_shortname="blank-manash-github-io-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("en");
+        fancydates(2, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

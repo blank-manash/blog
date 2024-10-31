@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html prefix="
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emacsome · A Generic Approach to LLD Problems </title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Manash Baul">
+<link rel="prev" href="../lld-elevator-system/" title="LLD - Elevator System" type="text/html">
+<link rel="next" href="../capacity-estimation/" title="Capacity Estimation" type="text/html">
+</head>
+<body class="">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    <div class="hsidebar">
+        <div class="container sidebar-sticky">
+            <div class="sidebar-about">
+              <h1>
+                <a href="https://blank-manash.github.io/blog/">
+                      <h1 id="brand"><a href="https://blank-manash.github.io/blog/" title="Emacsome" rel="home">
+
+        <span id="blog-title">Emacsome</span>
+    </a></h1>
+
+                </a>
+              </h1>
+                <p class="lead">A Technical Blog About On Software and Mathematics</p>
+
+            </div>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="https://github.com/blank-manash/">Github</a>
+        <a class="sidebar-nav-item" href="https://linkedin.com/in/manash-baul/">LinkedIn</a>
+        <a class="sidebar-nav-item" href="../../archive.html">Archive</a>
+        <a class="sidebar-nav-item" href="../../categories/">Tags</a>
+    
+    
+    </nav><footer id="footer"><span class="copyright">
+              Contents © 2024         <a href="mailto:mximpaid@gmail.com">Manash Baul</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            </span>
+            
+            
+        </footer>
+</div>
+    </div>
+
+    <div class="content container" id="content">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">A Generic Approach to LLD Problems</a></h1>
+
+    <span class="post-date">
+      <time class="published dt-published" datetime="2024-10-31T17:53:05+05:30" itemprop="datePublished" title="2024-10-31 17:53">2024-10-31 17:53</time></span>
+
+    
+    
+
+    <div class="e-content entry-content" itemprop="articleBody text">
+    <h2>Design and Requirements</h2>
+<p>Every LLD problem has a set of requirements, but the framework that I'm going to discuss is based on real-life application development.
+There are 3 components in the design:</p>
+<ol>
+<li>
+<strong>Service Layer</strong>: This layer is responsible for handling the business logic. It is the core of the application.</li>
+<li>
+<strong>Persistence Layer</strong>: This layer is responsible for handling the database operations.</li>
+<li>
+<strong>Controller Layer</strong>: This layer is responsible for handling the incoming requests and sending the response back to the client.</li>
+</ol>
+<!-- TEASER_END --><h2>Intuition</h2>
+<p>We first identify the entities in the problem statements, how the entities react with each other.</p>
+<ol>
+<li>
+<strong>Entities</strong>: Define the data model of our system.</li>
+<li>
+<strong>Relationships</strong>: Defines the business logic of our system.</li>
+</ol>
+<p>The business logic can vary from problem to problem, but the management data model remains the same. With this apporoach we can easily manipulate data to support the business logic.</p>
+<p>The main properties of the entities are:</p>
+<ol>
+<li>They have an unique ID</li>
+<li>They can retrieved by their ID</li>
+<li>Other classes should only store the ID of their relationships.</li>
+</ol>
+<h2>Approach</h2>
+<p>In LLD problems, we don't have to worry about the Controller Layer, as it is not a part of the problem statement. We only have to focus on the Service Layer. The persistence layer can be abstracted to use in-memory hashmap.</p>
+<p>Here is a generic implementation of the Persistence Layer:</p>
+<div class="code"><pre class="code literal-block"><span class="kd">class</span> <span class="nc">DataStore</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">BaseModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">BaseModel</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">store</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">model</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">getById</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cls</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">isInstance</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">id</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">cast</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">store</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getDataStream</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cls</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">store</span><span class="p">.</span><span class="na">values</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">cls</span><span class="p">::</span><span class="n">isInstance</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">cls</span><span class="p">::</span><span class="n">cast</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>For this to work, every entity should extend the BaseModel class. Here is the BaseModel class:</p>
+<div class="code"><pre class="code literal-block"><span class="kd">class</span> <span class="nc">BaseModel</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">BaseModel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UUID</span><span class="p">.</span><span class="na">randomUUID</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>Conclusion</h2>
+<p>This is a generic approach to solve LLD problems. It is not necessary to follow this approach, but it can be helpful in solving LLD problems quickly. The main idea is to separate the business logic from the data model. This approach can be extended to support more complex business logic.</p>
+    </div>
+    <aside class="postpromonav"><nav><div class="pager hidden-print pagination">
+
+            <span class="previous pagination-item older">
+                <a href="../lld-elevator-system/" rel="prev" title="LLD - Elevator System">
+                Previous post
+                </a>
+            </span>
+
+
+            <span class="next pagination-item newer">
+                <a href="../capacity-estimation/" rel="next" title="Capacity Estimation">
+Next post
+              </a>
+            </span>
+
+        </div>
+
+    </nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                    <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="blank-manash-github-io-blog",
+            disqus_url="https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/",
+        disqus_title="A Generic Approach to LLD Problems",
+        disqus_identifier="cache/posts/a-generic-approach-to-lld-problems.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="blank-manash-github-io-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("en");
+        fancydates(2, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
