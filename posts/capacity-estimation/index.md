@@ -22,14 +22,15 @@ This guide provides a concise overview of storage and compute estimation, common
 
 | **Item**                   | **Avg Size**       | **Examples**                                                   |
 |--------------------------|--------------------|----------------------------------------------------------------|
-| **Text Message**             | ~50 bytes          | Chat messages                                                  |
-| **Tweet**                    | ~200 bytes         | Includes hashtags, metadata                                    |
-| **User Profile**             | ~1-5 KB            | Profile info, settings, and preferences                        |
-| **Image (compressed)**       | ~100-500 KB        | JPG/PNG, low to medium resolution                              |
-| **Video (1 min)**            | ~5-10 MB           | Compressed, e.g., 720p                                         |
-| **Log Entry**                | ~100 bytes         | Timestamp, log level, message                                  |
-| **Sensor Data Point**        | ~100 bytes         | IoT data with metadata                                         |
-| **Machine Learning Model**   | ~100 MB - 1 GB     | Simple to complex models                                       |
+| **Text Message**             | 50 bytes          | Chat messages                                                  |
+| **Tweet**                    | 200 bytes         | Includes hashtags, metadata                                    |
+| **User Profile**             | 1-5 KB            | Profile info, settings, and preferences                        |
+| **Image (compressed)**       | 100-500 KB        | JPG/PNG, low to medium resolution                              |
+| **Request Payload**      | 50 KB             | POST/PUT Request                                               |
+| **Video (1 min)**            | 5-10 MB           | Compressed, e.g., 720p                                         |
+| **Log Entry**                | 100 bytes         | Timestamp, log level, message                                  |
+| **Sensor Data Point**        | 100 bytes         | IoT data with metadata                                         |
+| **Machine Learning Model**   | 100 MB - 1 GB     | Simple to complex models                                       |
 
 ### Storage Solutions by Scale:
 
@@ -65,21 +66,21 @@ This guide provides a concise overview of storage and compute estimation, common
 
 | **Scenario**                | **Estimated Usage**                             | **Solution**                                     |
 |-----------------------------|-------------------------------------------------|--------------------------------------------------|
-| **1M DAU Chat App**             | ~20 QPS peak, ~1 GB/day                         | Autoscaling, Redis cache                         |
-| **50M Tweets/Day**              | ~600 QPS avg, 2.5 TB/year                       | Sharded DB, multi-region storage                 |
-| **10K QPS E-commerce**          | ~500 MB/s data throughput                       | Load balancing, distributed caching              |
-| **1 PB Data Lake**              | ~100 TB/month growth                            | Data lake, e.g., S3, Hadoop HDFS                 |
-| **100M Video Views/Day**        | ~1 PB storage monthly, 2 Gbps peak              | CDN, global load balancer                        |
-| **5M User Transactions/Day**    | ~50 QPS avg, 5 TB storage/year                  | Sharded RDBMS, caching, high consistency         |
+| **1M DAU Chat App**             | 20 QPS peak, 1 GB/day                         | Autoscaling, Redis cache                         |
+| **50M Tweets/Day**              | 600 QPS avg, 2.5 TB/year                       | Sharded DB, multi-region storage                 |
+| **10K QPS E-commerce**          | 500 MB/s data throughput                       | Load balancing, distributed caching              |
+| **1 PB Data Lake**              | 100 TB/month growth                            | Data lake, e.g., S3, Hadoop HDFS                 |
+| **100M Video Views/Day**        | 1 PB storage monthly, 2 Gbps peak              | CDN, global load balancer                        |
+| **5M User Transactions/Day**    | 50 QPS avg, 5 TB storage/year                  | Sharded RDBMS, caching, high consistency         |
 
 ---
 
 ### Quick Calculation Tips
 
 - **Time Conversions**:
-  - 1 day ≈ 10^5 seconds, 1 month ≈ 10^6 seconds
+  - 1 day ≈ \\(10^5\\) seconds, 1 month ≈ \\(10^6\\) seconds
 - **Bytes Conversions**:
-  - 1 KB ≈ 10^3 bytes, 1 MB ≈ 10^6 bytes, 1 GB ≈ 10^9 bytes, 1 TB ≈ 10^12 bytes
+  - 1 KB ≈ \\(10^3\\) bytes, 1 MB ≈ \\(10^6\\) bytes, 1 GB ≈ \\(10^9\\) bytes, 1 TB ≈ \\(10^{12}\\) bytes
 
 ### Bytes to Powers of 10 Conversion Table
 
