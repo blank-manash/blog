@@ -138,25 +138,25 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #          else they won’t be highlighted when active.
 
 # Default Config
-# NAVIGATION_LINKS = {
-#     DEFAULT_LANG: (
-#         ("https://github.com/blank-manash/", "Github"),
-#         ("https://linkedin.com/in/manash-baul/", "LinkedIn"),
-#         ("/archive.html", "Archive"),
-#         ("/categories/", "Tags"),
-#     ),
-# }
-
-# Config for Zen Theme
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/index.html', 'Home', 'fa fa-home'),
-        ('/archive.html', 'Archives', 'fa fa-folder-open'),
-        ('/categories/', 'Tags', 'fa fa-tags'),
-        ("https://github.com/blank-manash/", "Github", "fab fa-github"),
-        ("https://linkedin.com/in/manash-baul/", "LinkedIn", "fab fa-linkedin"),
-    )
+        ("https://github.com/blank-manash/", "Github"),
+        ("https://linkedin.com/in/manash-baul/", "LinkedIn"),
+        ("/archive.html", "Archive"),
+        ("/categories/", "Tags"),
+    ),
 }
+
+# Config for Zen Theme
+# NAVIGATION_LINKS = {
+#     DEFAULT_LANG: (
+#         ('/index.html', 'Home', 'fa fa-home'),
+#         ('/archive.html', 'Archives', 'fa fa-folder-open'),
+#         ('/categories/', 'Tags', 'fa fa-tags'),
+#         ("https://github.com/blank-manash/", "Github", "fab fa-github"),
+#         ("https://linkedin.com/in/manash-baul/", "LinkedIn", "fab fa-linkedin"),
+#     )
+# }
 
 DATE_FANCINESS = 2
 
@@ -168,7 +168,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "zen"
+THEME = "hyde"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
@@ -1126,7 +1126,7 @@ PRETTY_URLS = True
 #       with the MarkdownExtension class and should not be added here.
 # Defaults are markdown.extensions.(fenced_code|codehilite|extra)
 # markdown.extensions.meta is required for Markdown metadata.
-MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.codehilite', 'markdown.extensions.extra']
+MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra', 'tables', 'meta']
 
 # Options to be passed to markdown extensions (See https://python-markdown.github.io/reference/)
 # Default is {} (no config at all)
