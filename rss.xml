@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Thu, 31 Oct 2024 13:48:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Capacity Estimation</title><link>https://blank-manash.github.io/blog/posts/capacity-estimation/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;p&gt;This guide provides a concise overview of storage and compute estimation, common sizes, and solutions by scale for system design interviews and real-world applications.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacsome</title><link>https://blank-manash.github.io/blog/</link><description>A Technical Blog About On Software and Mathematics</description><atom:link href="https://blank-manash.github.io/blog/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:mximpaid@gmail.com"&gt;Manash Baul&lt;/a&gt; </copyright><lastBuildDate>Sun, 19 Jan 2025 17:20:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Measurement is Commitment</title><link>https://blank-manash.github.io/blog/posts/measurement-is-commitment/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;p&gt;There are two rules on which this is based on.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/measurement-is-commitment/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/measurement-is-commitment/</guid><pubDate>Sun, 19 Jan 2025 17:07:31 GMT</pubDate></item><item><title>Capacity Estimation</title><link>https://blank-manash.github.io/blog/posts/capacity-estimation/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;p&gt;This guide provides a concise overview of storage and compute estimation, common sizes, and solutions by scale for system design interviews and real-world applications.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/capacity-estimation/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/capacity-estimation/</guid><pubDate>Thu, 31 Oct 2024 12:23:19 GMT</pubDate></item><item><title>A Generic Approach to LLD Problems</title><link>https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Design and Requirements&lt;/h2&gt;
 &lt;p&gt;Every LLD problem has a set of requirements, but the framework that I'm going to discuss is based on real-life application development.
 There are 3 components in the design:&lt;/p&gt;
@@ -8,14 +9,7 @@ There are 3 components in the design:&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Persistence Layer&lt;/strong&gt;: This layer is responsible for handling the database operations.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Controller Layer&lt;/strong&gt;: This layer is responsible for handling the incoming requests and sending the response back to the client.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/</guid><pubDate>Thu, 31 Oct 2024 12:23:05 GMT</pubDate></item><item><title>LLD - Elevator System</title><link>https://blank-manash.github.io/blog/posts/lld-elevator-system/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requirements&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The building has multiple floors and elevators.&lt;/li&gt;
-&lt;li&gt;Elevators can move up and down, stop at floors, and open/close doors.&lt;/li&gt;
-&lt;li&gt;Users can request elevators from any floor (hall call) and select their destination floor inside the elevator (cabin call).&lt;/li&gt;
-&lt;li&gt;The system should efficiently schedule elevator movements based on requests.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/lld-elevator-system/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>lld</category><guid>https://blank-manash.github.io/blog/posts/lld-elevator-system/</guid><pubDate>Sun, 15 Sep 2024 11:13:12 GMT</pubDate></item><item><title>Designing a Chat Application</title><link>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Overview and Requirements&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/a-generic-approach-to-lld-problems/</guid><pubDate>Thu, 31 Oct 2024 12:23:05 GMT</pubDate></item><item><title>Designing a Chat Application</title><link>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Overview and Requirements&lt;/h2&gt;
 &lt;p&gt;We are going to design a chat application that will allow users to send messages to each other. The chat application should support the following requirements:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;One to One Chat: Users should be able to send messages to other users.&lt;/li&gt;
@@ -26,9 +20,9 @@ There are 3 components in the design:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/designing-a-chat-application/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>system-design</category><guid>https://blank-manash.github.io/blog/posts/designing-a-chat-application/</guid><pubDate>Fri, 13 Sep 2024 13:24:30 GMT</pubDate></item><item><title>Concurrent Programming Problems</title><link>https://blank-manash.github.io/blog/posts/concurrent-programming-problems/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div&gt;&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This blog page is dedicated to concurrent programming problems. The problems are taken from various sources and solved in Java. I will expain the various programming constructs used to solve problems.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/concurrent-programming-problems/"&gt;Read more…&lt;/a&gt; (6 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/concurrent-programming-problems/</guid><pubDate>Wed, 11 Sep 2024 09:02:29 GMT</pubDate></item><item><title>Journey to MLOps</title><link>https://blank-manash.github.io/blog/posts/journey-to-mlops/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgcacfcaf" class="outline-2"&gt;
-&lt;h2 id="orgcacfcaf"&gt;Data Engineering vs Backend&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcacfcaf"&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/concurrent-programming-problems/"&gt;Read more…&lt;/a&gt; (6 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/concurrent-programming-problems/</guid><pubDate>Wed, 11 Sep 2024 09:02:29 GMT</pubDate></item><item><title>Journey to MLOps</title><link>https://blank-manash.github.io/blog/posts/journey-to-mlops/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org127ab6d" class="outline-2"&gt;
+&lt;h2 id="org127ab6d"&gt;Data Engineering vs Backend&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org127ab6d"&gt;
 &lt;p&gt;
 When I started my career in software engineering, the first team that I worked with was a Data Analytics Team.
 &lt;/p&gt;
@@ -48,9 +42,9 @@ However we were not responsible for the actual data. The part where data is load
 &lt;li&gt;Post Fetch Processing&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/journey-to-mlops/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/journey-to-mlops/</guid><pubDate>Sat, 31 Aug 2024 06:42:57 GMT</pubDate></item><item><title>How To Solve</title><link>https://blank-manash.github.io/blog/posts/how-to-solve/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orge0b53ee" class="outline-2"&gt;
-&lt;h2 id="orge0b53ee"&gt;Introduction&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge0b53ee"&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/journey-to-mlops/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/journey-to-mlops/</guid><pubDate>Sat, 31 Aug 2024 06:42:57 GMT</pubDate></item><item><title>How To Solve</title><link>https://blank-manash.github.io/blog/posts/how-to-solve/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org91a6092" class="outline-2"&gt;
+&lt;h2 id="org91a6092"&gt;Introduction&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org91a6092"&gt;
 &lt;p&gt;
 This is a slight overview on how you should approach a problem based on my experience. And what are the things you should be ready be with if you are unable to solve it.
 &lt;/p&gt;
@@ -59,30 +53,30 @@ This is a slight overview on how you should approach a problem based on my exper
 Some of Them are from the based on the book and additionally added by me.
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/how-to-solve/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/how-to-solve/</guid><pubDate>Thu, 06 Jul 2023 14:18:23 GMT</pubDate></item><item><title>Rate Limiter</title><link>https://blank-manash.github.io/blog/posts/rate-limiter/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org65e43f0" class="outline-2"&gt;
-&lt;h2 id="org65e43f0"&gt;Rate Limiter: The Why?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org65e43f0"&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/how-to-solve/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/how-to-solve/</guid><pubDate>Thu, 06 Jul 2023 14:18:23 GMT</pubDate></item><item><title>Rate Limiter</title><link>https://blank-manash.github.io/blog/posts/rate-limiter/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org49d8638" class="outline-2"&gt;
+&lt;h2 id="org49d8638"&gt;Rate Limiter: The Why?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org49d8638"&gt;
 &lt;p&gt;
 Rate Limiters are fundamental tools in order to facilitate security measures against DDoS attacks. It also helps in managing cost, regulate QPS and render deterministic expections on the usage of our system. Almost all the services you know today have a Rate Limiter Service in place, which is also offered within your Cloud Subscription if you are hosting behind a Cloud Server.
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/rate-limiter/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>system-design</category><guid>https://blank-manash.github.io/blog/posts/rate-limiter/</guid><pubDate>Sun, 18 Jun 2023 19:38:08 GMT</pubDate></item><item><title>Am I back?</title><link>https://blank-manash.github.io/blog/posts/am-i-back/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org2592e6d" class="outline-2"&gt;
-&lt;h2 id="org2592e6d"&gt;Am I back?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2592e6d"&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/rate-limiter/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>system-design</category><guid>https://blank-manash.github.io/blog/posts/rate-limiter/</guid><pubDate>Sun, 18 Jun 2023 19:38:08 GMT</pubDate></item><item><title>Am I back?</title><link>https://blank-manash.github.io/blog/posts/am-i-back/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org28eaace" class="outline-2"&gt;
+&lt;h2 id="org28eaace"&gt;Am I back?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org28eaace"&gt;
 &lt;p&gt;
 I am back to blogging after a long time. I have been busy with my work and a long time dissimilarity of leaving the world of linux to find other systems that the world. So I started to learn System Design in order to facilitate myself with all the other ways. I want to revive this blog as I no longer wonder about math support to be added.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdc97f87" class="outline-3"&gt;
-&lt;h3 id="orgdc97f87"&gt;How to revive this blog?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdc97f87"&gt;
+&lt;div id="outline-container-org3a97b13" class="outline-3"&gt;
+&lt;h3 id="org3a97b13"&gt;How to revive this blog?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3a97b13"&gt;
 &lt;p&gt;
 Admittedly, it was a big of discovery to find out how this blog actually worked. But to make sure that I can have it up and running again. Here is a bit of heads up on how to achieve that quick.
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/am-i-back/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/am-i-back/</guid><pubDate>Sat, 17 Jun 2023 12:00:44 GMT</pubDate></item><item><title>Emacs Blogging</title><link>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-orgbdfb8d6" class="outline-2"&gt;
-&lt;h2 id="orgbdfb8d6"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgbdfb8d6"&gt;
+&lt;p&gt;&lt;a href="https://blank-manash.github.io/blog/posts/am-i-back/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://blank-manash.github.io/blog/posts/am-i-back/</guid><pubDate>Sat, 17 Jun 2023 12:00:44 GMT</pubDate></item><item><title>Emacs Blogging</title><link>https://blank-manash.github.io/blog/posts/emacs-blogging%20/</link><dc:creator>Manash Baul</dc:creator><description>&lt;div id="outline-container-org318724b" class="outline-2"&gt;
+&lt;h2 id="org318724b"&gt;How I finally made a blog with org-mode.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org318724b"&gt;
 &lt;p&gt;
 When I started off with development, one of the first tasks that you are typically supposed to do is make a blog. Me, a first year undergraduate completely new to the world of programming was handed a bunch of &lt;code&gt;.js&lt;/code&gt; files with the expectation to build a blog out of it.
 &lt;/p&gt;
