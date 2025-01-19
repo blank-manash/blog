@@ -3,6 +3,7 @@
 .. slug: lld-elevator-system
 .. date: 2024-09-15 16:43:12 UTC+05:30
 .. tags: lld
+.. status: private
 .. category:
 .. link: 
 .. description: 
